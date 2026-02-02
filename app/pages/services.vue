@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Header />
-  </div>
+  <div>الخدمات</div>
 </template>
 
 <script setup>

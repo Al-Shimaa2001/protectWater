@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Header />
-  </div>
+  <div>اعمالنا</div>
 </template>
 
 <script setup>

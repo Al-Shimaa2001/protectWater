@@ -1,5 +1,8 @@
 <template>
-  <div>
-    <h1 class="bg-red-300 text-center">hi</h1>
-  </div>
+  <UApp>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </UApp>
 </template>
+<script setup></script>

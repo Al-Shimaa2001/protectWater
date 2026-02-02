@@ -1,1 +1,36 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-family-base: "Cairo ", Arial, sans-serif;
+  --color-primary: 210 85% 40%;
+  /* (Blue) Main brand, buttons, links; */
+  --color-accent: 145 70% 40%;
+  /* (Green) CTA, success states; */
+  --color-background: 210 20% 98%;
+  /* Page background; */
+  --color-foreground: 215 25% 15%;
+  /* Main text; */
+  --color-muted: 210 20% 95%;
+  /* Subtle backgrounds; */
+  --color-muted-foreground: 215 15% 45%;
+  /* Secondary text; */
+  --color-card: 0 0% 100%;
+  /* Card backgrounds; */
+  --color-border: 210 20% 90%;
+  /* Borders; */
+  --color-water-blue: 210 85% 40%;
+  /* Water-related elements */
+  --color-service-green: 145 70% 40%;
+  /* Service highlights */
+  --color-trust-navy: 215 50% 20%;
+  /* Trust/authority elements */
+}
+@layer base {
+  body {
+    font-family: var(--font-family-base);
+    background-color: hsl(var(--color-background));
+    color: hsl(var(--color-foreground));
+    direction: rtl;
+  }
+}

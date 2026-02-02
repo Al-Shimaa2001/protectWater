@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Header />
-  </div>
+  <div>من نحن</div>
 </template>
 
 <script setup>
