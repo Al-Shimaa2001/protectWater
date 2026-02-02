@@ -61,11 +61,5 @@ const items = computed<NavigationMenuItem[]>(() => [
   </UHeader>
 </template>
 <style lang="css" scoped>
-.navBar {
-  background-color: #3b82f6;
-  color: white;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  direction: ltr;
-}
+
 </style>
