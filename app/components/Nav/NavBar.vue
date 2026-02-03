@@ -39,7 +39,7 @@ const items = computed<NavigationMenuItem[]>(() => [
         <div
           class="flex bg-blue-500 rounded-lg p-1 items-center justify-center me-2 shadow-blue-200"
         >
-          <Icon
+          <UIcon
             name="lucide:droplets"
             width="24"
             height="24"
@@ -62,8 +62,8 @@ const items = computed<NavigationMenuItem[]>(() => [
 </template>
 <style lang="css" scoped>
 .navBar {
-  background-color: #3b82f6;
-  color: white;
+  background-color: #ffffff;
+  color: blue;
   font-weight: bold;
   border-radius: 0.5rem;
 }
