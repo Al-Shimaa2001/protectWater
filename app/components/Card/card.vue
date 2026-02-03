@@ -17,7 +17,7 @@
       >
         {{ footer }}
         <Icon
-          icon="mdi-light:arrow-left"
+          name="mdi-light:arrow-left"
           width="24"
           height="24"
           style="color: #ffffff"
