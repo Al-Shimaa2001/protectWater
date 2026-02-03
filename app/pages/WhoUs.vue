@@ -4,7 +4,8 @@
 
 <script setup>
 definePageMeta({
-  layout: "defults",
+  layout: "default",
+  title: "من نحن",
 });
 </script>
 

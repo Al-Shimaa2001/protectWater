@@ -1,12 +1,14 @@
 <template>
   <div>
-    <Header />
+    <HomePageLandingSection />
+    <HomePageServicesSection />
   </div>
 </template>
 
 <script setup>
 definePageMeta({
-  layout: "defults",
+  layout: "default",
+  title: "الصفحة الرئيسية  ",
 });
 </script>
 

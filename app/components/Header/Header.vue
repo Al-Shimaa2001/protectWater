@@ -9,7 +9,7 @@
         <div class="text-center text-white">
           <h1 class="text-4xl md:text-5xl lg:text-6xl">
             شركة متخصصة في
-            <p class="text-green-500">العزل المائي والحراري</p>
+            <p class="text-orange-500">العزل المائي والحراري</p>
             وكشف تسربات المياه
           </h1>
         </div>
