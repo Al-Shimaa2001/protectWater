@@ -1,8 +1,7 @@
 <template>
-  
   <UCard
     variant="outlined"
-    class="flex flex-col items-start rounded-lg shadow-sm"
+    class="flex flex-col items-start rounded-lg shadow-xl"
   >
     <template #header>
       <div class="mb-4 w-14 h-14 rounded-xl bg-blue-100/90 p-2">
