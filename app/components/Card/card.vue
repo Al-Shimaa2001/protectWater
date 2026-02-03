@@ -1,5 +1,9 @@
 <template>
-  <UCard variant="outlined" class="flex flex-col items-start">
+  
+  <UCard
+    variant="outlined"
+    class="flex flex-col items-start rounded-lg shadow-sm"
+  >
     <template #header>
       <div class="mb-4 w-14 h-14 rounded-xl bg-blue-100/90 p-2">
         <UIcon :name="name" class="text-4xl text-primary-500" />
@@ -13,9 +17,11 @@
 
     <template #footer>
       <button
-        class="hover:bg-primary-600 hover:text-white px-4 py-2 rounded-md"
+        class="hover:bg-primary-600 hover:text-white px-4 py-2 rounded-md flex items-center gap-x-3"
       >
-        {{ footer }}
+        <p>
+          {{ footer }}
+        </p>
         <Icon
           name="mdi-light:arrow-left"
           width="24"
