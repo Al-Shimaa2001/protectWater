@@ -1,7 +1,13 @@
 <template>
   <header class="py-4 md:py-6 lg:py-8">
     <div class="container max-w-4xl mx-auto px-4">
-      <div class="flex flex-col gap-6 items-center justify-center">
+      <div
+        class="flex flex-col gap-6 items-center justify-center"
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0"
+      >
         <div class="bg-gray-300/20 p-2 rounded-xl flex items-center">
           <span class="m-2 p-2 bg-green-500 rounded-full"></span>
           <p class="text-lg text-white">خبرة اكثر من 15 عام في المجال</p>

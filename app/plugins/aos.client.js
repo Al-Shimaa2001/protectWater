@@ -8,13 +8,13 @@ export default defineNuxtPlugin((nuxtApp) => {
       AOS.init({
         // Basic configuration
         offset: 100,
-        delay: 100,
+        // delay: 100,
         duration: 600,
         easing: "ease-in-out",
         once: true, // Animation happens only once
 
         // RTL support for Arabic
-        disable: window.innerWidth < 768, // Disable on mobile if needed
+        // disable: window.innerWidth < 768, // Disable on mobile if needed
         startEvent: "DOMContentLoaded",
 
         // Custom settings

@@ -1,7 +1,8 @@
 <template>
   <UCard
+    data-aos="fade-up"
     variant="outlined"
-    class="flex flex-col items-start rounded-lg shadow-xl"
+    class="flex flex-col items-start rounded-lg border border-gray-200 p-2 h-full"
   >
     <template #header>
       <div class="mb-4 w-14 h-14 rounded-xl bg-blue-100/90 p-2">

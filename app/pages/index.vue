@@ -2,6 +2,7 @@
   <div>
     <HomePageHeroSection />
     <HomePageServicesSection />
+    <HomePageWhyUs />
   </div>
 </template>
 

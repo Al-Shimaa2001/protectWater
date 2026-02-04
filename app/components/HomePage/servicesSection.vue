@@ -1,5 +1,5 @@
 <template>
-  <main class="py-24 px-4 md:px-8 lg:px-16">
+  <main class="py-24 px-4 md:px-8 lg:px-16 bg-white">
     <HeaderSection
       mainTitle="خدماتنا"
       subTitle="خدمات متكاملة للعزل والتنظيف والحماية"
@@ -13,7 +13,8 @@
         :header="service.title"
         :details="service.details"
         :footer="service.footer"
-        class="hover:shadow-2xl hover:translate-y-2 transition-shadow duration-300"
+        class="hover:shadow-lg transition-shadow duration-300 hover:border-primary/50"
+        data-aos="fade-up"
       />
     </div>
   </main>
