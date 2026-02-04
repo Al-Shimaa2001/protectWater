@@ -1,13 +1,9 @@
 <template>
-<div class="p-2 bg-yellow-300 rounded-md text-center cursor-pointer">
+  <div class="p-2 bg-primary rounded-md text-center cursor-pointer">
     اعرف المزيد
-</div>
+  </div>
 </template>
 
-<script setup>
-    
-</script>
+<script setup></script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

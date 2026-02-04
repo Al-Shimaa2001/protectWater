@@ -142,39 +142,13 @@
 
       <!-- Call to Action -->
       <div
-        class="mt-16 text-center"
+        class="mt-16 flex justify-center items-center flex-col"
         dir="rtl"
         data-aos="fade-up"
         data-aos-delay="1000"
         data-aos-duration="1000"
       >
-        <UButton
-          to="/contact"
-          color="primary"
-          size="xl"
-          icon="i-heroicons-chat-bubble-left-right"
-          class="shadow-lg hover:shadow-xl transition-shadow"
-          data-aos="zoom-in"
-          data-aos-delay="1100"
-        >
-          ابدأ مشروعك الآن
-        </UButton>
-
-        <p
-          class="mt-4 text-gray-500 dark:text-gray-400 text-sm"
-          data-aos="fade-up"
-          data-aos-delay="1200"
-        >
-          اتصل بنا للحصول على استشارة مجانية
-          <UIcon
-            name="i-heroicons-phone"
-            class="w-4 h-4 mr-2 inline-block"
-            data-aos="pulse"
-            data-aos-delay="1300"
-            data-aos-duration="1500"
-            data-aos-iteration="infinite"
-          />
-        </p>
+        <ButtonContactUs />
       </div>
     </UContainer>
   </section>

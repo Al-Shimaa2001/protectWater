@@ -3,10 +3,10 @@
     <!-- زر الاتصال الهاتفي المباشر -->
     <UTooltip text="اتصال هاتفي مباشر" :kbds="['meta', 'C']">
       <UButton
-        class="rounded-md text-white px-8 py-3 font-bold bg-green-600 hover:bg-gray-300/30 hover:text-black hover:cursor-pointer transition-all"
+        class="rounded-md text-white px-8 py-3 font-bold bg-primary hover:bg-gray-300/30 hover:text-black hover:cursor-pointer transition-all"
         icon="i-heroicons-phone-arrow-up-right"
         @click="makeCall"
-      > 
+      >
         اتصل الآن
       </UButton>
     </UTooltip>

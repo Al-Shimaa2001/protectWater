@@ -2,7 +2,7 @@
   <UTooltip text="Open on whatsapp" :kbds="['meta', 'G']">
     <UButton
       @click="openWhatsApp"
-      class="rounded-md text-white px-8 py-3 font-bold bg-gray-300/30 hover:bg-green-600 hover:text-white hover:cursor-pointer hover:outline"
+      class="rounded-md text-white px-8 py-3 font-bold bg-gray-300/30 hover:bg-primary hover:text-white hover:cursor-pointer hover:outline"
       variant="solid"
       target="_blank"
       icon="i-heroicons-chat-bubble-left-right"
