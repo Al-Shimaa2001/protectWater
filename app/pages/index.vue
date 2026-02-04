@@ -5,6 +5,7 @@
     <HomePageWhyUs />
     <HomePageProcessSection/>
     <HomePageProcessSectionMobileVersion/>
+    <HomePageFAQSection/>
   </div>
 </template>
 

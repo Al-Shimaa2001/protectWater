@@ -1,7 +1,8 @@
 <template>
-  <div class="flex flex-wrap gap-6 w-full max-w-4xl">
+  <div class="flex flex-wrap justify-center items-center gap-6 w-full max-w-4xl">
     <UCard
-    
+    data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
       class="text-center bg-white/10 backdrop-blur-md border-white/20"
       v-for="(item, index) in details"
       :key="index"
