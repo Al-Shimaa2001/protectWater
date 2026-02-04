@@ -9,11 +9,16 @@
       <div class="max-w-5xl mx-auto">
         <!-- Section Header -->
         <div class="text-center mb-16" data-aos="fade-up" data-aos-delay="100">
-          <span
-            class="inline-block px-4 py-1.5 bg-secondary text-primary text-sm font-semibold rounded-full mb-4"
+          <UBadge
+            color="primary"
+            variant="soft"
+            size="lg"
+            data-aos="flip-up"
+            class="mb-4"
           >
             الأسئلة الشائعة
-          </span>
+          </UBadge>
+
           <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-4">
             هل لديك أسئلة؟
           </h2>
@@ -114,5 +119,3 @@ const mobileFaqItems = computed(() =>
   })),
 );
 </script>
-
-
