@@ -1,7 +1,7 @@
 <template>
   <section
     id="process"
-    class="py-24 bg-background overflow-hidden hidden lg:flex"
+    class="py-24 bg-white overflow-hidden hidden lg:flex"
     data-aos="fade-up"
     data-aos-duration="1000"
   >

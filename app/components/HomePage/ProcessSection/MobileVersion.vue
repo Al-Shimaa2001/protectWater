@@ -162,21 +162,7 @@
         </div>
       </div>
 
-      <!-- Stats Section -->
-      <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div
-          v-for="stat in stats"
-          :key="stat.label"
-          class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
-        >
-          <div class="text-3xl md:text-4xl font-bold text-primary mb-2">
-            {{ stat.value }}
-          </div>
-          <div class="text-gray-600 dark:text-gray-300">
-            {{ stat.label }}
-          </div>
-        </div>
-      </div>
+     
     </UContainer>
   </section>
 </template>
@@ -240,10 +226,5 @@ const steps = ref([
   },
 ]);
 
-const stats = ref([
-  { value: "99%", label: "رضا العملاء" },
-  { value: "15+", label: "سنوات خبرة" },
-  { value: "5000+", label: "مشروع ناجح" },
-  { value: "24/7", label: "دعم فني" },
-]);
+
 </script>
