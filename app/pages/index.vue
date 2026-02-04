@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HomePageLandingSection />
+    <HomePageHeroSection />
     <HomePageServicesSection />
   </div>
 </template>

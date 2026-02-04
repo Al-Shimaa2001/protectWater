@@ -7,15 +7,15 @@
           <p class="text-lg text-white">خبرة اكثر من 15 عام في المجال</p>
         </div>
         <div class="text-center text-white">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl mt-2">
             شركة متخصصة في
-            <p class="text-orange-300">العزل المائي والحراري</p>
+            <p class="text-orange-300 pt-2 mt-2 pb-6">العزل المائي والحراري</p>
             وكشف تسربات المياه
           </h1>
         </div>
         <div>
           <p
-            class="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto text-white"
+            class="text-center text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto text-white mt-2"
           >
             نقدم حلولاً متكاملة لحماية منزلك من التسربات والرطوبة بأحدث التقنيات
             وضمان يصل إلى 15 سنة

@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-4xl"
-  >
+  <div class="flex flex-wrap gap-6 w-full max-w-4xl">
     <UCard
       class="text-center bg-white/10 backdrop-blur-md border-white/20"
       v-for="(item, index) in details"
