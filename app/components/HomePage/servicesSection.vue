@@ -1,5 +1,5 @@
 <template>
-  <main class="py-24 px-4 md:px-8 lg:px-16 bg-white">
+  <main class="py-24 px-4 md:px-8 lg:px-16 bg-white class=text-gray-900">
     <HeaderSection
       mainTitle="خدماتنا"
       subTitle="خدمات متكاملة للعزل والتنظيف والحماية"
