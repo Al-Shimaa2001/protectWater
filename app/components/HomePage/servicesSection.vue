@@ -5,7 +5,7 @@
       subTitle="خدمات متكاملة للعزل والتنظيف والحماية"
       description="نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة"
     />
-    <div class="services-container">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
       <Card
         v-for="(service, index) in services"
         :key="index"
@@ -52,10 +52,4 @@ const services = [
 ];
 </script>
 
-<style scoped>
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-</style>
+<style scoped></style>
