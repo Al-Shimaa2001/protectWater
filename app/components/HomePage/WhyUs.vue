@@ -4,37 +4,12 @@
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <!-- Content Side -->
         <div>
-          <UBadge
-            color="primary"
-            variant="soft"
-            size="lg"
-            data-aos="flip-up"
-            class="mb-4"
-          >
-            لماذا تختارنا
-          </UBadge>
-
-          <h2
-            class="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+          <HeaderSection
+            mainTitle="لماذا تختارنا"
+            subTitle="نحن الخيار الأمثل لحماية منزلك"
+            description="مع خبرة تتجاوز 15 عاماً في مجال العزل وكشف التسربات، نضمن لك خدمة احترافية ونتائج مضمونة بنسبة 100%"
             data-aos="fade-up"
-          >
-            نحن الخيار الأمثل
-            <span data-aos="fade-left" class="text-primary">لحماية منزلك</span>
-          </h2>
-
-          <p
-            data-aos="fade-up"
-            class="text-lg text-gray-600 mb-8 leading-relaxed"
-          >
-            مع خبرة تتجاوز
-            <span data-aos="fade-right" class="font-bold text-primary"
-              >15 عاماً</span
-            >
-            في مجال العزل وكشف التسربات، نضمن لك خدمة احترافية ونتائج مضمونة
-            بنسبة
-            <span class="font-bold text-primary">100%</span>
-          </p>
-
+          />
           <!-- Certifications -->
           <div data-aos="fade-up" class="space-y-3">
             <div
@@ -69,12 +44,10 @@
                 <UIcon :name="feature.icon" class="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3
-                  class="text-lg font-bold text-gray-900  mb-1"
-                >
+                <h3 class="text-lg font-bold text-gray-900 mb-1">
                   {{ feature.title }}
                 </h3>
-                <p class="text-sm text-gray-600 ">
+                <p class="text-sm text-gray-600">
                   {{ feature.description }}
                 </p>
               </div>

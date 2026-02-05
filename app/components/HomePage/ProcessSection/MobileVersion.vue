@@ -2,20 +2,11 @@
   <section class="py-24 bg-linear-to-b from-white to-gray-50 flex lg:hidden">
     <UContainer>
       <!-- Section Header -->
-      <div class="text-center mb-16" dir="rtl">
-        <UBadge color="primary" variant="soft" size="xl" class="mb-6">
-          <UIcon name="i-heroicons-cog-6-tooth" class="w-5 h-5 ml-2" />
-          كيف نعمل
-        </UBadge>
-
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          رحلة النجاح <span class="text-primary">خطوة بخطوة</span>
-        </h2>
-
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          نتبع نهجاً منظماً ومحترفاً لضمان حصولك على أفضل خدمة
-        </p>
-      </div>
+      <HeaderSection
+        mainTitle="كيف نعمل"
+        subTitle="خطوات العمل لدينا"
+        description="نتبع منهجية علمية واضحة لضمان أفضل النتائج"
+      />
 
       <!-- Timeline for Desktop -->
       <div class="hidden lg:block">

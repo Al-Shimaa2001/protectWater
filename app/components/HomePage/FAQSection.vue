@@ -8,32 +8,11 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-5xl mx-auto">
         <!-- Section Header -->
-        <div
-          class="text-center mb-12 md:mb-16"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <UBadge
-            color="primary"
-            variant="soft"
-            size="lg"
-            data-aos="flip-up"
-            class="mb-4"
-          >
-            الأسئلة الشائعة
-          </UBadge>
-
-          <h2 class="text-2xl md:text-4xl font-bold text-foreground mb-4">
-            هل لديك أسئلة؟
-          </h2>
-          <p
-            class="text-muted-foreground text-sm md:text-base max-w-2xl mx-auto"
-          >
-            إليك إجابات على أكثر الأسئلة شيوعاً حول خدماتنا. انقر على أي سؤال
-            لعرض الإجابة
-          </p>
-        </div>
-
+        <HeaderSection
+          mainTitle="الأسئلة الشائعة"
+          subTitle="هل لديك أسئلة؟"
+          description="إليك إجابات على أكثر الأسئلة شيوعاً حول خدماتنا. انقر على أي سؤال لعرض الإجابة"
+        />
         <!-- FAQ Accordion - Same for mobile and desktop -->
         <div class="mt-8 md:mt-12" data-aos="fade-up" data-aos-delay="200">
           <UAccordion

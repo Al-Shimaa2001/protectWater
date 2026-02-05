@@ -1,137 +1,81 @@
 <template>
-  <section
-    id="process"
-    class="py-24 bg-white overflow-hidden hidden lg:flex"
-    data-aos="fade-up"
-    data-aos-duration="1000"
-  >
+  <section id="process" class="py-24 bg-white overflow-hidden" >
     <UContainer class="relative">
-      <!-- Section Header with Animation -->
-      <div
-        class="text-center mb-16"
-        data-aos="fade-down"
-        data-aos-delay="100"
-        data-aos-duration="800"
-      >
+      <!-- عنوان القسم -->
+      <div class="text-center mb-16">
         <UBadge
           color="primary"
           variant="subtle"
           size="lg"
           class="mb-4 inline-block"
-          data-aos="zoom-in"
-          data-aos-delay="200"
         >
           كيف نعمل
         </UBadge>
 
-        <h2
-          class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           خطوات العمل لدينا
         </h2>
 
-        <p
-          class="text-gray-600 max-w-2xl mx-auto text-lg"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
           نتبع منهجية علمية واضحة لضمان أفضل النتائج
         </p>
       </div>
 
-      <!-- Steps with Staggered Animations -->
       <div class="relative">
-        <!-- Connection Line with Animation -->
         <div
-          class="hidden lg:block absolute top-1/2 right-0 left-0 h-0.5 bg-linear-to-l from-primary/30 via-primary/50 to-primary/30 -translate-y-1/2 z-0"
-          data-aos="zoom-in"
-          data-aos-delay="500"
-          data-aos-duration="1200"
-        />
-
-        <!-- Steps Grid -->
-        <div
-          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 relative z-10"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 relative z-10"
         >
           <div
             v-for="(step, index) in steps"
-            :key="index"
+            :key="step.number"
             class="text-center group"
-            :data-aos="getStepAnimation(index)"
-            :data-aos-delay="getStepDelay(index)"
-            :data-aos-duration="800"
-            :data-aos-anchor-placement="'top-bottom'"
           >
-            <!-- Icon Container -->
-            <div class="relative inline-block mb-6">
-              <!-- Outer Circle -->
+            <div class="relative">
+              <!-- حاوية الأيقونة -->
               <div
-                class="relative w-24 h-24 rounded-2xl bg-linear-to-br from-white to-gray-50 shadow-lg border border-gray-200 flex items-center justify-center mx-auto group-hover:shadow-xl group-hover:border-primary/30 group-hover:scale-105 transition-all duration-300"
+                class="relative w-24 h-24 rounded-2xl bg-linear-to-br from-white to-gray-50 shadow-lg border border-gray-200 flex items-center justify-center mx-auto mb-6 group-hover:shadow-xl group-hover:border-primary/30 group-hover:scale-105 transition-all duration-300"
               >
-                <!-- Inner Circle -->
+                <!-- الدائرة الداخلية -->
                 <div
                   class="w-16 h-16 rounded-full bg-linear-to-r from-primary/10 to-primary/5 flex items-center justify-center"
                 >
                   <UIcon
                     :name="step.icon"
-                    class="w-8 h-8 text-primary"
-                    data-aos="flip-up"
-                    :data-aos-delay="getStepDelay(index) + 200"
+                    class="w-8 h-8 text-primary transition-transform group-hover:scale-110"
                   />
                 </div>
 
-                <!-- Number Badge -->
+                <!-- رقم الخطوة -->
                 <div
                   class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-linear-to-r from-primary to-blue-600 text-white text-sm font-bold flex items-center justify-center shadow-lg"
-                  data-aos="zoom-in"
-                  :data-aos-delay="getStepDelay(index) + 100"
                 >
                   {{ step.number }}
                 </div>
 
-                <!-- Connecting Line Dot -->
+                <!-- نقطة الاتصال (لشاشات الكبيرة فقط) -->
                 <div
-                  class="hidden lg:block absolute top-1/2 left-full w-4 h-4 rounded-full bg-primary border-4 border-white -translate-y-1/2 -translate-x-1/2 z-20"
-                  data-aos="zoom-in"
-                  :data-aos-delay="getStepDelay(index) + 300"
+                  v-if="index < steps.length - 1"
+                  class="hidden lg:block absolute top-1/2 left-full w-4 h-4 rounded-full bg-primary border-4 border-white transform -translate-y-1/2 -translate-x-1/2 z-20"
                 />
               </div>
-            </div>
 
-            <!-- Content -->
-            <h3
-              class="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors"
-              data-aos="fade-up"
-              :data-aos-delay="getStepDelay(index) + 400"
-            >
-              {{ step.title }}
-            </h3>
-            <p
-              class="text-sm text-gray-600 leading-relaxed"
-              data-aos="fade-up"
-              :data-aos-delay="getStepDelay(index) + 500"
-            >
-              {{ step.description }}
-            </p>
-
-            <!-- Hover Arrow -->
-            <div
-              class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              data-aos="fade-up"
-              :data-aos-delay="getStepDelay(index) + 600"
-            >
-              <UIcon
-                name="i-heroicons-arrow-down"
-                class="w-5 h-5 text-primary animate-bounce mx-auto"
-              />
+              <!-- المحتوى -->
+              <div class="px-2">
+                <h3
+                  class="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300"
+                >
+                  {{ step.title }}
+                </h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  {{ step.description }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Mobile Connection Line -->
-        <div class="lg:hidden mt-8" data-aos="zoom-in" data-aos-delay="800">
+        <!-- خط الاتصال (لشاشات الجوال) -->
+        <div class="block lg:hidden mt-12">
           <div class="flex justify-center">
             <div
               class="w-full max-w-md h-0.5 bg-linear-to-r from-primary/30 via-primary/50 to-primary/30 rounded-full"
@@ -140,15 +84,9 @@
         </div>
       </div>
 
-      <!-- Call to Action -->
-      <div
-        class="mt-16 flex justify-center items-center flex-col"
-        dir="rtl"
-        data-aos="fade-up"
-        data-aos-delay="1000"
-        data-aos-duration="1000"
-      >
-        <ButtonContactUs />
+      <!-- زر الاتصال -->
+      <div class="mt-16 text-center">
+        <ButtonContactUs class="inline-block" />
       </div>
     </UContainer>
   </section>
@@ -189,21 +127,10 @@ const steps = ref([
     description: "تسليم شهادة ضمان معتمدة",
   },
 ]);
-
-// Get different animations for each step
-const getStepAnimation = (index) => {
-  const animations = [
-    "fade-right",
-    "fade-up",
-    "fade-up",
-    "fade-up",
-    "fade-left",
-  ];
-  return animations[index];
-};
-
-// Staggered delay for each step
-const getStepDelay = (index) => {
-  return 500 + index * 100; // Starts at 500ms, increases by 100ms each
-};
 </script>
+
+<style scoped>
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+</style>
