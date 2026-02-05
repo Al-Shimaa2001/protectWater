@@ -25,7 +25,7 @@
         </UBadge>
 
         <h2
-          class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
+          class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           data-aos="fade-up"
           data-aos-delay="300"
         >
@@ -33,7 +33,7 @@
         </h2>
 
         <p
-          class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg"
+          class="text-gray-600 max-w-2xl mx-auto text-lg"
           data-aos="fade-up"
           data-aos-delay="400"
         >
@@ -68,15 +68,15 @@
             <div class="relative inline-block mb-6">
               <!-- Outer Circle -->
               <div
-                class="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 shadow-lg border border-gray-200 dark:border-gray-700 flex items-center justify-center mx-auto group-hover:shadow-xl group-hover:border-primary/30 group-hover:scale-105 transition-all duration-300"
+                class="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-200 flex items-center justify-center mx-auto group-hover:shadow-xl group-hover:border-primary/30 group-hover:scale-105 transition-all duration-300"
               >
                 <!-- Inner Circle -->
                 <div
-                  class="w-16 h-16 rounded-full bg-gradient-to-r from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 flex items-center justify-center"
+                  class="w-16 h-16 rounded-full bg-gradient-to-r from-primary/10 to-primary/5 flex items-center justify-center"
                 >
                   <UIcon
                     :name="step.icon"
-                    class="w-8 h-8 text-primary dark:text-primary-400"
+                    class="w-8 h-8 text-primary"
                     data-aos="flip-up"
                     :data-aos-delay="getStepDelay(index) + 200"
                   />
@@ -93,7 +93,7 @@
 
                 <!-- Connecting Line Dot -->
                 <div
-                  class="hidden lg:block absolute top-1/2 left-full w-4 h-4 rounded-full bg-primary border-4 border-white dark:border-gray-900 -translate-y-1/2 -translate-x-1/2 z-20"
+                  class="hidden lg:block absolute top-1/2 left-full w-4 h-4 rounded-full bg-primary border-4 border-white -translate-y-1/2 -translate-x-1/2 z-20"
                   data-aos="zoom-in"
                   :data-aos-delay="getStepDelay(index) + 300"
                 />
@@ -102,7 +102,7 @@
 
             <!-- Content -->
             <h3
-              class="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors"
+              class="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors"
               data-aos="fade-up"
               :data-aos-delay="getStepDelay(index) + 400"
             >

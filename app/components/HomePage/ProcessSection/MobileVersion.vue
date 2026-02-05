@@ -8,13 +8,11 @@
           كيف نعمل
         </UBadge>
 
-        <h2
-          class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6"
-        >
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           رحلة النجاح <span class="text-primary">خطوة بخطوة</span>
         </h2>
 
-        <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
           نتبع نهجاً منظماً ومحترفاً لضمان حصولك على أفضل خدمة
         </p>
       </div>
@@ -45,8 +43,8 @@
                 <UCard
                   :ui="{
                     base: 'relative overflow-visible',
-                    background: 'dark:bg-gray-800',
-                    ring: 'ring-1 ring-gray-200 dark:ring-gray-700',
+
+                    ring: 'ring-1 ring-gray-200 ',
                     body: { base: 'p-6' },
                   }"
                   class="shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -65,25 +63,23 @@
                     </div>
 
                     <div>
-                      <h3
-                        class="text-xl font-bold text-gray-900 dark:text-white mb-2"
-                      >
+                      <h3 class="text-xl font-bold text-gray-900 mb-2">
                         {{ step.title }}
                       </h3>
-                      <p class="text-gray-600 dark:text-gray-300 mb-4">
+                      <p class="text-gray-600 mb-4">
                         {{ step.description }}
                       </p>
 
                       <!-- Additional Details -->
                       <div
                         v-if="step.details"
-                        class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
+                        class="mt-4 pt-4 border-t border-gray-200"
                       >
                         <ul class="space-y-2">
                           <li
                             v-for="(detail, detailIndex) in step.details"
                             :key="detailIndex"
-                            class="flex items-center text-sm text-gray-500 dark:text-gray-400"
+                            class="flex items-center text-sm text-gray-500"
                           >
                             <UIcon
                               name="i-heroicons-check-circle"
@@ -100,7 +96,7 @@
 
               <!-- Timeline Dot -->
               <div
-                class="w-8 h-8 rounded-full bg-white dark:bg-gray-900 border-4 border-primary shadow-lg z-10"
+                class="w-8 h-8 rounded-full bg-white border-4 border-primary shadow-lg z-10"
               />
             </div>
           </div>
@@ -120,15 +116,15 @@
             <div v-for="(step, index) in steps" :key="index" class="relative">
               <!-- Timeline Dot -->
               <div
-                class="absolute right-0 w-5 h-5 rounded-full bg-primary border-4 border-white dark:border-gray-900 shadow-lg transform translate-x-1/2 z-10"
+                class="absolute right-0 w-5 h-5 rounded-full bg-primary border-4 border-white shadow-lg transform translate-x-1/2 z-10"
               />
 
               <!-- Step Content -->
               <UCard
                 :ui="{
                   base: 'relative',
-                  background: 'dark:bg-gray-800',
-                  ring: 'ring-1 ring-gray-200 dark:ring-gray-700',
+
+                  ring: 'ring-1 ring-gray-200 ',
                   body: { base: 'p-5' },
                 }"
                 class="shadow-md hover:shadow-lg transition-shadow"
@@ -144,14 +140,12 @@
                   <div>
                     <div class="flex items-center gap-2 mb-2">
                       <UIcon :name="step.icon" class="w-5 h-5 text-primary" />
-                      <h3
-                        class="text-lg font-bold text-gray-900 dark:text-white"
-                      >
+                      <h3 class="text-lg font-bold text-gray-900">
                         {{ step.title }}
                       </h3>
                     </div>
 
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                    <p class="text-gray-600 text-sm">
                       {{ step.description }}
                     </p>
                   </div>
@@ -161,8 +155,6 @@
           </div>
         </div>
       </div>
-
-     
     </UContainer>
   </section>
 </template>
@@ -225,6 +217,4 @@ const steps = ref([
     ],
   },
 ]);
-
-
 </script>

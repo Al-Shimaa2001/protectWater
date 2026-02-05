@@ -70,11 +70,11 @@
               </div>
               <div>
                 <h3
-                  class="text-lg font-bold text-gray-900 dark:text-white mb-1"
+                  class="text-lg font-bold text-gray-900  mb-1"
                 >
                   {{ feature.title }}
                 </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-300">
+                <p class="text-sm text-gray-600 ">
                   {{ feature.description }}
                 </p>
               </div>
