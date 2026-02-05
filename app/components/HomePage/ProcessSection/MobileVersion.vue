@@ -1,5 +1,5 @@
 <template>
-  <section class="py-24 bg-gradient-to-b from-white to-gray-50 flex lg:hidden">
+  <section class="py-24 bg-linear-to-b from-white to-gray-50 flex lg:hidden">
     <UContainer>
       <!-- Section Header -->
       <div class="text-center mb-16" dir="rtl">
@@ -22,7 +22,7 @@
         <div class="relative">
           <!-- Vertical Timeline Line -->
           <div
-            class="absolute right-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-blue-500 to-primary transform translate-x-1/2 z-0"
+            class="absolute right-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-primary via-blue-500 to-primary transform translate-x-1/2 z-0"
           />
 
           <!-- Steps -->
@@ -51,7 +51,7 @@
                 >
                   <!-- Step Number -->
                   <div
-                    class="absolute top-6 w-12 h-12 rounded-full bg-gradient-to-r from-primary to-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-lg"
+                    class="absolute top-6 w-12 h-12 rounded-full bg-linear-to-r from-primary to-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-lg"
                     :class="index % 2 === 0 ? '-right-6' : '-left-6'"
                   >
                     {{ step.number }}
@@ -108,7 +108,7 @@
         <div class="relative">
           <!-- Vertical Line -->
           <div
-            class="absolute right-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-blue-500 to-primary z-0"
+            class="absolute right-6 top-0 bottom-0 w-1 bg-linear-to-b from-primary via-blue-500 to-primary z-0"
           />
 
           <!-- Steps -->
@@ -132,7 +132,7 @@
                 <div class="flex items-start gap-4">
                   <!-- Step Number -->
                   <div
-                    class="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-primary to-blue-600 text-white flex items-center justify-center font-bold text-sm shadow"
+                    class="shrink-0 w-10 h-10 rounded-full bg-linear-to-r from-primary to-blue-600 text-white flex items-center justify-center font-bold text-sm shadow"
                   >
                     {{ step.number }}
                   </div>

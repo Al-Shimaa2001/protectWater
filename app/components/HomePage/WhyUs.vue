@@ -44,7 +44,7 @@
             >
               <UIcon
                 name="i-heroicons-check-circle"
-                class="w-5 h-5 text-emerald-500 flex-shrink-0"
+                class="w-5 h-5 text-emerald-500 shrink-0"
               />
               <span class="text-gray-700">{{ cert }}</span>
             </div>

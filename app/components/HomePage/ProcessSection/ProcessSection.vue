@@ -45,7 +45,7 @@
       <div class="relative">
         <!-- Connection Line with Animation -->
         <div
-          class="hidden lg:block absolute top-1/2 right-0 left-0 h-0.5 bg-gradient-to-l from-primary/30 via-primary/50 to-primary/30 -translate-y-1/2 z-0"
+          class="hidden lg:block absolute top-1/2 right-0 left-0 h-0.5 bg-linear-to-l from-primary/30 via-primary/50 to-primary/30 -translate-y-1/2 z-0"
           data-aos="zoom-in"
           data-aos-delay="500"
           data-aos-duration="1200"
@@ -68,11 +68,11 @@
             <div class="relative inline-block mb-6">
               <!-- Outer Circle -->
               <div
-                class="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-lg border border-gray-200 flex items-center justify-center mx-auto group-hover:shadow-xl group-hover:border-primary/30 group-hover:scale-105 transition-all duration-300"
+                class="relative w-24 h-24 rounded-2xl bg-linear-to-br from-white to-gray-50 shadow-lg border border-gray-200 flex items-center justify-center mx-auto group-hover:shadow-xl group-hover:border-primary/30 group-hover:scale-105 transition-all duration-300"
               >
                 <!-- Inner Circle -->
                 <div
-                  class="w-16 h-16 rounded-full bg-gradient-to-r from-primary/10 to-primary/5 flex items-center justify-center"
+                  class="w-16 h-16 rounded-full bg-linear-to-r from-primary/10 to-primary/5 flex items-center justify-center"
                 >
                   <UIcon
                     :name="step.icon"
@@ -84,7 +84,7 @@
 
                 <!-- Number Badge -->
                 <div
-                  class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-r from-primary to-blue-600 text-white text-sm font-bold flex items-center justify-center shadow-lg"
+                  class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-linear-to-r from-primary to-blue-600 text-white text-sm font-bold flex items-center justify-center shadow-lg"
                   data-aos="zoom-in"
                   :data-aos-delay="getStepDelay(index) + 100"
                 >
@@ -109,7 +109,7 @@
               {{ step.title }}
             </h3>
             <p
-              class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed"
+              class="text-sm text-gray-600 leading-relaxed"
               data-aos="fade-up"
               :data-aos-delay="getStepDelay(index) + 500"
             >
@@ -134,7 +134,7 @@
         <div class="lg:hidden mt-8" data-aos="zoom-in" data-aos-delay="800">
           <div class="flex justify-center">
             <div
-              class="w-full max-w-md h-0.5 bg-gradient-to-r from-primary/30 via-primary/50 to-primary/30 rounded-full"
+              class="w-full max-w-md h-0.5 bg-linear-to-r from-primary/30 via-primary/50 to-primary/30 rounded-full"
             />
           </div>
         </div>
