@@ -1,8 +1,10 @@
 <template>
-  <div class="flex flex-wrap justify-center items-center gap-6 w-full max-w-4xl">
+  <div
+    class="flex flex-wrap justify-center items-center gap-6 w-full max-w-5xl"
+  >
     <UCard
-    data-aos="fade-up"
-     data-aos-anchor-placement="top-bottom"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
       class="text-center bg-white/10 backdrop-blur-md border-white/20"
       v-for="(item, index) in details"
       :key="index"
@@ -15,7 +17,7 @@
           :style="{ color: item.color }"
         />
       </div>
-      <div class="text-2xl md:text-3xl font-bold text-white">
+      <div class="text-white text-center text-2xl md:text-3xl font-bold">
         {{ item.number }}
       </div>
       <div class="text-white/80 text-sm mt-1">{{ item.label }}</div>
@@ -34,20 +36,14 @@ const details = computed(() => [
   {
     icon: "ic:outline-shield",
     color: "#08ae0f",
-    number: `${displayCount.value}+ سنة`,
-    label: "خبرة معتمدة",
+    number: `${displayCount.value}+ `,
+    label: " سنة خبرة معتمدة ",
   },
   {
     icon: "lucide:award",
     color: "#08ae0f",
-    number: `${displayClintCount.value}+ عميل`,
+    number: `${displayClintCount.value}+ `,
     label: "عملاء سعداء",
-  },
-  {
-    icon: "ic:outline-watch-later",
-    color: "#08ae0f",
-    number: "15",
-    label: "سنوات خبرة",
   },
 ]);
 

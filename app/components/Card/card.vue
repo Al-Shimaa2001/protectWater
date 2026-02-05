@@ -17,7 +17,7 @@
 
     <template #footer>
       <button
-        class="hover:bg-primary-600 hover:text-white px-4 py-2 rounded-md flex items-center gap-x-3"
+        class="focus:bg-primary-600 hover:bg-primary-600 focus:text-white hover:text-white px-4 py-2 rounded-md flex items-center gap-x-3"
       >
         <p>
           {{ footer }}
