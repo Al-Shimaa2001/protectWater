@@ -35,7 +35,7 @@ const items = computed<NavigationMenuItem[]>(() => [
 <template>
   <UHeader>
     <template #title>
-      <section class="flex items-center">
+      <NuxtLink to="/" class="flex items-center">
         <div
           class="flex bg-blue-500 rounded-lg p-1 items-center justify-center me-2 shadow-blue-200"
         >
@@ -50,7 +50,7 @@ const items = computed<NavigationMenuItem[]>(() => [
           <h1 class="text-lg font-bold text-foreground">العزل الذهبي</h1>
           <span class="text-xs text-muted">للعزل وكشف التسريبات </span>
         </div>
-      </section>
+      </NuxtLink>
     </template>
 
     <UNavigationMenu :items="items" class="navBar" />
