@@ -1,49 +1,97 @@
 <template>
-  <header class="py-6 lg:py-8 h-full">
-    <div class="container max-w-4xl mx-auto px-4">
-      <div
-        class="flex flex-col gap-6 items-center justify-center"
-        data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="300"
-      >
-        <div class="bg-gray-300/20 p-2 rounded-xl flex items-center">
-          <span class="m-2 p-2 bg-green-500 rounded-full"></span>
-          <p class="text-lg text-white">خبرة اكثر من 15 عام في المجال</p>
-        </div>
-        <div class="text-center text-white">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl mt-2">
-            شركة متخصصة في
-            <p class="text-orange-300 pt-2 mt-2 pb-6">العزل المائي والحراري</p>
-            وكشف تسربات المياه
-          </h1>
-        </div>
-        <div>
-          <p
-            class="text-center text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto text-white mt-2"
-          >
-            نقدم حلولاً متكاملة لحماية منزلك من التسربات والرطوبة بأحدث التقنيات
-            وضمان يصل إلى 15 سنة
-          </p>
-        </div>
-        <div class="flex gap-x-4">
-          <ButtonContactUs />
-          <ButtonWhatsapp />
-        </div>
-        <div>
-          <Counter />
-        </div>
+  <div
+    class="header-container relative overflow-hidden"
+    :style="backgroundStyle"
+  >
+    <div v-if="overlay" class="absolute inset-0" :style="overlayStyle"></div>
+
+    <!-- محتوى الهيدر -->
+    <div
+      class="relative z-10 h-full py-4 flex flex-col items-center justify-center text-center text-white"
+    >
+      <div class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 mb-6">
+        <span class="m-2 p-2 bg-green-500 rounded-full"></span>
+        <p class="text-lg">خبرة اكثر من 15 عام في المجال</p>
       </div>
+      <slot name="header">
+        <h1
+          v-if="title"
+          class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+        >
+          {{ title }}
+        </h1>
+      </slot>
+
+      <p v-if="description" class="text-lg md:text-xl mb-6 max-w-2xl">
+        {{ description }}
+      </p>
+
+      <slot></slot>
     </div>
-  </header>
+  </div>
 </template>
-<style scoped>
-header {
-  background: linear-gradient(
-    147deg,
-    rgb(29, 173, 235) 88%,
-    rgb(133, 182, 223) 100%
-  );
-  height: 100vh;
+
+<script setup lang="ts">
+interface Props {
+  title?: string;
+  description?: string;
+  background?: string;
+  backgroundType?: "color" | "image" | "gradient" | "video";
+  overlay?: boolean;
+  overlayColor?: string;
+  overlayOpacity?: number;
+  height?: string;
+  minHeight?: string;
 }
-</style>
+
+const props = withDefaults(defineProps<Props>(), {
+  description: "",
+  background: "",
+  backgroundType: "color",
+  overlay: false,
+  overlayColor: "#000",
+  overlayOpacity: 0.5,
+  height: "auto",
+  minHeight: "400px",
+});
+
+const backgroundStyle = computed(() => {
+  const styles: Record<string, string> = {
+    height: props.height,
+    minHeight: props.minHeight,
+  };
+
+  if (!props.background) return styles;
+
+  switch (props.backgroundType) {
+    case "image":
+      styles.backgroundImage = `url('${props.background}')`;
+      styles.backgroundSize = "cover";
+      styles.backgroundPosition = "center";
+      styles.backgroundRepeat = "no-repeat";
+      break;
+
+    case "gradient":
+      styles.background = props.background;
+      break;
+
+    case "video":
+      // ستتعامل مع الفيديو بشكل مختلف في الـ template
+      break;
+
+    case "color":
+    default:
+      styles.backgroundColor = props.background;
+      break;
+  }
+
+  return styles;
+});
+
+const overlayStyle = computed(() => ({
+  backgroundColor: props.overlayColor,
+  opacity: props.overlayOpacity.toString(),
+}));
+</script>
+
+<style scoped></style>
