@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import MobileNav from "~/components/Nav/MobileNav.vue";
+</script>
+
 <template>
   <nav-bar class="hidden lg:flex" />
-  <mobile-nav class="lg:hidden" />
+  <MobileNav class="flex lg:hidden" />
   <slot />
   <Footer />
 </template>
