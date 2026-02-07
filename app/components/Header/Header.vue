@@ -8,21 +8,32 @@
     <!-- محتوى الهيدر -->
     <div
       class="relative z-10 h-full py-4 flex flex-col items-center justify-center text-center text-white"
+      data-aos="fade-up"
     >
-      <div class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 mb-6">
+      <div
+        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 mb-6"
+        data-aos="fade-up"
+        data-aos-delay="50"
+      >
         <span class="m-2 p-2 bg-green-500 rounded-full"></span>
         <p class="text-lg">خبرة اكثر من 15 عام في المجال</p>
       </div>
-      <slot name="header">
+      <slot name="header" data-aos="zoom-out">
         <h1
           v-if="title"
           class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+          data-aos="fade-up"
         >
           {{ title }}
         </h1>
       </slot>
 
-      <p v-if="description" class="text-lg md:text-xl mb-6 max-w-2xl">
+      <p
+        v-if="description"
+        class="text-lg md:text-xl mb-6 max-w-2xl"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
         {{ description }}
       </p>
 
