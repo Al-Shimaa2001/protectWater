@@ -139,8 +139,8 @@ const quickLinks = [
   { label: "الرئيسية", href: "/" },
   { label: "خدماتنا", href: "/services" },
   { label: "من نحن", href: "/about" },
-  { label: "أعمالنا", href: "/projects" },
-  { label: "تواصل معنا", href: "/contact" },
+  { label: "أعمالنا", href: "/ourWork" },
+  { label: "تواصل معنا", href: "/contactUs" },
 ];
 
 const contactInfo = [

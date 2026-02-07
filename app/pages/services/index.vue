@@ -1,28 +1,30 @@
 <template>
   <div class="min-h-screen">
-    <Header
-      background="/images/hero-services.jpg"
-      backgroundType="image"
-      overlay="true"
-      overlayColor="var(--color-blue-800)"
-      overlayOpacity="0.5"
-      height="100%"
-      description="نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة"
-    >
-      <div
-        class="flex gap-4 justify-center my-3"
-        data-aos="fade-up"
-        data-aos-delay="100"
+    <main class="">
+      <Header
+        background="/images/hero-services.jpg"
+        backgroundType="image"
+        overlay="true"
+        overlayColor="var(--color-blue-800)"
+        overlayOpacity="0.5"
+        height="100%"
+        description="نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة"
       >
-        <ButtonContactUs />
-        <ButtonWhatsapp />
-      </div>
-    </Header>
-    <main class="pt-20">
+        <div
+          class="flex gap-4 justify-center my-3"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <ButtonContactUs />
+          <ButtonWhatsapp />
+        </div>
+      </Header>
       <!-- Services Grid Section -->
-      <section class="py-20 bg-gray-50">
+      <section
+        class="py-20 bg-gray-50 flex flex-col items-center justify-center"
+      >
         <div class="container">
-          <div class="grid md:grid-cols-2 gap-8">
+          <div class="grid md:grid-cols-2 gap-8 p-20">
             <div
               v-for="(service, index) in services"
               :key="service.id"
@@ -79,7 +81,9 @@
       </section>
 
       <!-- Booking Section -->
-      <section class="py-20 bg-linear-to-br from-primary-50 to-blue-50">
+      <section
+        class="flex flex-col items-center justify-center py-20 bg-linear-to-br from-primary-50 to-blue-50"
+      >
         <div class="container">
           <div
             class="max-w-4xl mx-auto"
@@ -91,12 +95,12 @@
                 حجز خدمة سريع
               </h2>
               <p class="text-gray-600 text-lg">
-                اختر الخدمة المطلوبة وحدد موعداً يناسبك وسنتواصل معك فوراً
+                اختر الخدمة المطلوبة تواصل معانا فوراً
               </p>
             </div>
 
-         
             <!-- Booking Features -->
+
             <div class="grid md:grid-cols-3 gap-6 mt-12">
               <div
                 v-for="feature in bookingFeatures"
@@ -117,14 +121,14 @@
                   {{ feature.description }}
                 </p>
               </div>
-                <div
-        class="flex gap-4 justify-center my-3"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        <ButtonContactUs />
-        <ButtonWhatsapp />
-      </div>
+            </div>
+            <div
+              class="flex gap-4 items-center justify-center my-3 py-4 w-full"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <ButtonContactUs />
+              <ButtonWhatsapp />
             </div>
           </div>
         </div>
@@ -135,13 +139,24 @@
 
 <script setup>
 definePageMeta({
-  layout: "default",
-  title: "الخدمات",
+  title: "خدماتنا - حماية المياه",
+  description:
+    "نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة",
+});
+useHead({
+  title: "خدماتنا - حماية المياه",
+  meta: [
+    {
+      name: "description",
+      content:
+        "نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة",
+    },
+  ],
 });
 const services = [
   {
     id: "insulation",
-    slug: "/services/insulation",
+    slug: "./insulation.vue",
     icon: "i-heroicons-water-drop",
     title: "العزل المائي والحراري",
     description:
@@ -156,7 +171,7 @@ const services = [
   },
   {
     id: "leak-detection",
-    slug: "/services/leak-detection",
+    slug: "./leak-detection.vue",
     icon: "i-heroicons-magnifying-glass",
     title: "كشف التسربات",
     description:
@@ -171,7 +186,7 @@ const services = [
   },
   {
     id: "cleaning",
-    slug: "/services/cleaning",
+    slug: "./cleaning.vue",
     icon: "i-heroicons-sparkles",
     title: "خدمات التنظيف",
     description:
@@ -186,7 +201,7 @@ const services = [
   },
   {
     id: "pest-control",
-    slug: "/services/pest-control",
+    slug: "./pest-control.vue",
     icon: "i-heroicons-bug",
     title: "مكافحة الحشرات",
     description:
@@ -209,37 +224,6 @@ const colorClasses = {
   service: "bg-orange-50 text-orange-600 border-orange-200",
 };
 
-// Booking Form
-const bookingForm = ref({
-  service: null,
-  date: "",
-  time: null,
-  name: "",
-  phone: "",
-  address: "",
-  notes: "",
-});
-
-const isSubmitting = ref(false);
-
-// Service Options for Select
-const serviceOptions = [
-  { value: "insulation", label: "العزل المائي والحراري" },
-  { value: "leak-detection", label: "كشف التسربات" },
-  { value: "cleaning", label: "خدمات التنظيف" },
-  { value: "pest-control", label: "مكافحة الحشرات" },
-];
-
-// Time Slots
-const timeSlots = [
-  "08:00 ص - 10:00 ص",
-  "10:00 ص - 12:00 م",
-  "12:00 م - 02:00 م",
-  "02:00 م - 04:00 م",
-  "04:00 م - 06:00 م",
-  "06:00 م - 08:00 م",
-].map((time) => ({ value: time, label: time }));
-
 // Booking Features
 const bookingFeatures = [
   {
@@ -261,57 +245,6 @@ const bookingFeatures = [
     delay: 300,
   },
 ];
-
-// Handle Booking Submission
-const handleBooking = async () => {
-  isSubmitting.value = true;
-
-  // Simulate API call
-  await new Promise((resolve) => setTimeout(resolve, 1500));
-
-  // Reset form
-  bookingForm.value = {
-    service: null,
-    date: "",
-    time: null,
-    name: "",
-    phone: "",
-    address: "",
-    notes: "",
-  };
-
-  // Show success message
-  useToast().add({
-    title: "تم الحجز بنجاح!",
-    description: "سنقوم بالتواصل معك قريباً لتأكيد الموعد",
-    icon: "i-heroicons-check-circle",
-    color: "green",
-  });
-
-  isSubmitting.value = false;
-};
 </script>
 
-<style scoped>
-/* Custom styles for RTL */
-[dir="rtl"] .container {
-  text-align: right;
-}
-
-/* Smooth transitions */
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
-
-/* Card hover effects */
-.hover\:-translate-y-1:hover {
-  transform: translateY(-0.25rem);
-}
-
-/* Gradient text for buttons */
-.bg-gradient-to-l {
-  background-image: linear-gradient(to left, var(--tw-gradient-stops));
-}
-</style>
+<style scoped></style>

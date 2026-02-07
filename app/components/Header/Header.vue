@@ -11,7 +11,7 @@
       data-aos="fade-up"
     >
       <div
-        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 mb-6"
+        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 my-5 mx-3"
         data-aos="fade-up"
         data-aos-delay="50"
       >
@@ -62,7 +62,7 @@ const props = withDefaults(defineProps<Props>(), {
   overlay: false,
   overlayColor: "#000",
   overlayOpacity: 0.5,
-  height: "auto",
+  height: "100vh",
   minHeight: "400px",
 });
 
@@ -86,10 +86,6 @@ const backgroundStyle = computed(() => {
       styles.background = props.background;
       break;
 
-    case "video":
-      // ستتعامل مع الفيديو بشكل مختلف في الـ template
-      break;
-
     case "color":
     default:
       styles.backgroundColor = props.background;
@@ -105,4 +101,8 @@ const overlayStyle = computed(() => ({
 }));
 </script>
 
-<style scoped></style>
+<style scoped>
+.header-container {
+  height: 100vh;
+}
+</style>
