@@ -76,7 +76,7 @@
 
           <!-- Quick Contact Buttons -->
           <div
-            class="flex flex-col sm:flex-row gap-4"
+            class="flex  gap-4"
             data-aos="fade-up"
             data-aos-delay="500"
           >

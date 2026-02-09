@@ -25,8 +25,6 @@ defineProps({
   subTitle: { type: String, default: "خدمات متكاملة للعزل والتنظيف والحماية" },
   description: {
     type: String,
-    default:
-      "نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة",
   },
 });
 </script>
