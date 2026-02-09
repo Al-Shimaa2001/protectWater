@@ -33,27 +33,19 @@
                 والاحترافية.
               </p>
             </div>
-            <Card
-              class="bg-secondary/40 rounded-2xl p-8 aspect-video flex items-center justify-center"
-              data-aos="fade-left"
-              data-aos-duration="1000"
-              name="i-heroicons-building-office"
-              header="العزل الذهبي"
-              details="منذ 2008"
-            />
           </div>
 
           <!-- Stats -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-            <Card
+            <Counter
               v-for="(stat, index) in stats"
               :key="index"
               :data-aos="'fade-up'"
               :data-aos-delay="index * 100"
               data-aos-duration="800"
-              :name="stat.icon"
-              :header="stat.value"
-              :details="stat.label"
+              :icon="stat.icon"
+              :number="stat.value"
+              :label="stat.label"
             />
           </div>
 
@@ -93,10 +85,18 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: "default",
+  title: "من نحن",
+});
+useHead({
+  title: "من نحن - العزل الذهبي",
+});
+
 const stats = ref([
-  { icon: "i-heroicons-clock", value: "+15", label: "سنوات خبرة" },
-  { icon: "i-heroicons-users", value: "+5000", label: "عميل راضٍ" },
-  { icon: "i-heroicons-building-office", value: "+10000", label: "مشروع منجز" },
+  { icon: "i-heroicons-clock", value: "15", label: "سنوات خبرة" },
+  { icon: "i-heroicons-users", value: "5000", label: "عميل راضٍ" },
+  { icon: "i-heroicons-building-office", value: "10000", label: "مشروع منجز" },
   { icon: "i-heroicons-award", value: "10", label: "سنوات ضمان" },
 ]);
 const vision = ref([

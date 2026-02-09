@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full py-4">
+  <div class="h-full">
     <Header
       background="/images/hero-home.jpg"
       backgroundType="image"
@@ -18,16 +18,35 @@
         <ContactUs />
         <Whatsapp />
       </div>
-      <div class="my-3">
-        <Counter />
+      <div class="my-3 flex items-center gap-5 justify-center">
+        <Counter
+          v-for="(item, index) in counterData"
+          :key="index"
+          :icon="item.icon"
+          :color="item.color"
+          :number="item.number"
+          :label="item.label"
+        />
       </div>
     </Header>
   </div>
 </template>
 
 <script setup>
-import ContactUs from "../Button/contactUs.vue";
-import Whatsapp from "../Button/whatsapp.vue";
+const counterData = ref([
+  {
+    icon: "i-heroicons-clock",
+    color: "primary",
+    number: 15,
+    label: "سنوات خبرة معتمدة ",
+  },
+  {
+    icon: "i-heroicons-user-group",
+    color: "primary",
+    number: 5000,
+    label: "عملاء سعداء",
+  },
+]);
 </script>
 
 <style scoped></style>

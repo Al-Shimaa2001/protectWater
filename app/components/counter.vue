@@ -1,74 +1,60 @@
-<template>
-  <div
-    class="flex flex-wrap justify-center items-center gap-6 w-full max-w-5xl"
-  >
-    <UCard
-      data-aos="fade-up"
-      data-aos-anchor-placement="top-bottom"
-      class="text-center bg-white/10 backdrop-blur-md border-white/20"
-      v-for="(item, index) in details"
-      :key="index"
-    >
-      <div class="mb-2">
-        <Icon
-          :name="item.icon"
-          width="32"
-          height="32"
-          :style="{ color: item.color }"
-        />
-      </div>
-      <div class="text-white text-center text-2xl md:text-3xl font-bold">
-        {{ item.number }}
-      </div>
-      <div class="text-white/80 text-sm mt-1">{{ item.label }}</div>
-    </UCard>
-  </div>
-</template>
-
 <script setup>
-const targetNumber = 15;
-const clintNumber = 5000;
-const displayCount = ref(0);
-const displayClintCount = ref(0);
+// تعريف الخصائص المستلمة
+const props = defineProps({
+  number: {
+    type: Number,
+    required: true,
+  },
+  label: {
+    type: String,
+    required: true,
+  },
+  icon: {
+    // تغيير من name إلى icon
+    type: String,
+    required: true,
+  },
+  color: {
+    type: String,
+    default: "black",
+  },
+});
 
-// تحديث الأرقام بشكل تفاعلي
-const details = computed(() => [
-  {
-    icon: "ic:outline-shield",
-    color: "#08ae0f",
-    number: `${displayCount.value}+ `,
-    label: " سنة خبرة معتمدة ",
-  },
-  {
-    icon: "lucide:award",
-    color: "#08ae0f",
-    number: `${displayClintCount.value}+ `,
-    label: "عملاء سعداء",
-  },
-]);
+const displayNumber = ref(0);
 
 onMounted(() => {
-  const duration = 2000;
-  const frames = duration / 16;
-  const step = targetNumber / frames;
-  const clientStep = clintNumber / frames;
+  let start = 0;
+  const end = props.number;
+  const duration = 2000; // مدة 2 ثانية
+  const increment = 1;
+
+  // حساب الوقت بين كل تحديث
+  const stepTime = Math.abs(Math.floor(duration / end));
 
   const timer = setInterval(() => {
-    displayCount.value = Math.min(
-      targetNumber,
-      displayCount.value + Math.ceil(step),
-    );
-    displayClintCount.value = Math.min(
-      clintNumber,
-      displayClintCount.value + Math.ceil(clientStep),
-    );
-
-    if (
-      displayCount.value === targetNumber &&
-      displayClintCount.value === clintNumber
-    ) {
+    start += increment;
+    displayNumber.value = start;
+    if (start >= end) {
+      displayNumber.value = end;
       clearInterval(timer);
     }
-  }, 16);
+  }, stepTime);
 });
 </script>
+
+<template>
+  <UCard
+    data-aos="zoom-in"
+    data-aos-duration="1000"
+    class="text-center bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300"
+  >
+    <div class="mb-4">
+      <!-- استخدام خاصية icon -->
+      <Icon :name="icon" width="48" height="48" :style="{ color: color }" />
+    </div>
+    <div class="text-primary text-center text-3xl md:text-4xl font-bold mb-2">
+      {{ displayNumber }}<span v-if="number">+</span>
+    </div>
+    <div class="text-primary/90 text-base">{{ label }}</div>
+  </UCard>
+</template>
