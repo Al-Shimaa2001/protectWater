@@ -1,5 +1,4 @@
 <template>
- 
   <div class="text-center mb-16">
     <UBadge
       color="primary"

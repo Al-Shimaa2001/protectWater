@@ -10,7 +10,7 @@
       description="تواصل معنا للاستفسار والخدمات - نحن هنا لمساعدتك في أي وقت"
     >
       <div
-        class="flex gap-4 justify-center my-7 translate-y-80"
+        class="flex gap-4 justify-center my-7"
         data-aos="fade-up"
         data-aos-delay="100"
       >

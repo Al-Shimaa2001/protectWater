@@ -3,9 +3,8 @@
     <HomePageHeroSection />
     <HomePageServicesSection />
     <HomePageWhyUs />
-    <HomePageProcessSection/>
-    <HomePageProcessSectionMobileVersion/>
-    <HomePageFAQSection/>
+    <HomePageProcessSection />
+    <HomePageFAQSection />
   </div>
 </template>
 
