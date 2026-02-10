@@ -7,22 +7,22 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "تواصل معانا",
     to: "/contactUs",
-    active: route.path.startsWith("/تواصل معانا"),
+    active: route.path.startsWith("/contactUs"),
   },
   {
     label: "اعمالنا",
     to: "/ourWork",
-    active: route.path.startsWith("/اعمالنا"),
+    active: route.path.startsWith("/ourWork"),
   },
   {
     label: "من نحن",
-    to: "/WhoUs",
-    active: route.path.startsWith("/من نحن "),
+    to: "/whoUs",
+    active: route.path.startsWith("/whoUs"),
   },
   {
     label: "خدماتنا",
     to: "/services",
-    active: route.path.startsWith("/خدماتنا"),
+    active: route.path.startsWith("/services"),
   },
   {
     label: "الرئيسية    ",

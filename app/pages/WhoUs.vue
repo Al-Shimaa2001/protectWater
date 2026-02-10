@@ -46,6 +46,7 @@
               :icon="stat.icon"
               :number="stat.value"
               :label="stat.label"
+              textColor="var(--color-primary)"
             />
           </div>
 

@@ -12,11 +12,14 @@ const props = defineProps({
   icon: {
     // تغيير من name إلى icon
     type: String,
-    required: true,
   },
   color: {
     type: String,
     default: "black",
+  },
+  textColor: {
+    type: String,
+    default: "white",
   },
 });
 
@@ -48,13 +51,19 @@ onMounted(() => {
     data-aos-duration="1000"
     class="text-center bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300"
   >
-    <div class="mb-4">
+    <div class="mb-4" :style="{ color: textColor }">
       <!-- استخدام خاصية icon -->
-      <Icon :name="icon" width="48" height="48" :style="{ color: color }" />
+      <Icon
+        v-if="icon"
+        :name="icon"
+        width="48"
+        height="48"
+        :style="{ color: color }"
+      />
     </div>
-    <div class="text-primary text-center text-3xl md:text-4xl font-bold mb-2">
+    <div class="text-primary text-center text-3xl md:text-4xl font-bold mb-2"    :style="{ color: textColor }">
       {{ displayNumber }}<span v-if="number">+</span>
     </div>
-    <div class="text-primary/90 text-base">{{ label }}</div>
+    <div class="text-primary/40 text-base"    :style="{ color: textColor }">{{ label }}</div>
   </UCard>
 </template>

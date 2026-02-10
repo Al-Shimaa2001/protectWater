@@ -1,41 +1,185 @@
 <template>
-  <div>
-    <main class="pt-16">
-      <section class="container mx-auto px-4 py-12">
-        <h1
-          class="text-3xl font-bold text-center mb-8"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          أعمالنا
-        </h1>
-        <div class="max-w-4xl mx-auto">
-          <p
-            class="text-lg text-gray-700 text-center mb-12"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            اكتشف مجموعة من مشاريعنا الناجحة في العزل المائي والحراري، مكافحة
-            الحشرات، وتنظيف المجالس والحدائق. نحن نفخر بتقديم خدمات عالية الجودة
-            لعملائنا الكرام.
-          </p>
+  <div class="min-h-screen bg-background">
+    <!-- Hero Section -->
+    <Header
+      background="/images/hero-projects.jpg"
+      backgroundType="image"
+      overlay="true"
+      overlayColor="var(--color-secondary)"
+      overlayOpacity="0.6"
+      height="100%"
+      title="أعمالنا تتحدث عنّا"
+      description="نفخر بتقديم خدمات بأعلى معايير الجودة في مجالات العزل والترميم ومكافحة الحشرات والتنظيف في جميع مناطق المملكة"
+    />
+    <!-- Stats -->
+    <section
+      class="py-12 border bg-card"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      <div
+        class="container mx-auto flex flex-wrap justify-center gap-8 md:gap-16"
+      >
+        <counter
+          v-for="(stat, index) in stats"
+          :key="stat.index"
+          :number="stat.number"
+          :label="stat.label"
+          textColor="var(--color-secondary)"
+        />
+      </div>
+    </section>
 
-          <!-- Quick Contact Buttons -->
-          <div class="flex items-center gap-4 justify-center"></div>
+    <!-- Filter Tabs -->
+    <section class="py-10 px-4">
+      <div class="container mx-auto">
+        <div
+          class="flex flex-wrap justify-center gap-3 mb-12"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <UButton
+            v-for="cat in categories"
+            :key="cat.id"
+            :variant="activeCategory === cat.id ? 'solid' : 'outline'"
+            :color="activeCategory === cat.id ? 'primary' : 'gray'"
+            class="font-semibold gap-2 rounded-full px-5"
+            @click="setActiveCategory(cat.id)"
+          >
+            <Icon :name="cat.icon" class="w-4 h-4" />
+            {{ cat.label }}
+          </UButton>
         </div>
-      </section>
-    </main>
+
+        <!-- Project Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-[240px]"
+        >
+          <ProjectCard
+            v-for="(project, index) in filtered"
+            :key="project.id"
+            :image="project.image"
+            :title="project.title"
+            :category="project.categoryLabel"
+            :description="project.description"
+            :tall="project.tall"
+            :data-aos="'fade-up'"
+            :data-aos-delay="(index % 3) * 100"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section
+      class="py-16 px-4 bg-secondary"
+      data-aos="zoom-in"
+      data-aos-duration="800"
+    >
+      <div class="container mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl font-cairo font-black text-primary-foreground mb-4"
+        >
+          هل لديك مشروع يحتاج تنفيذ؟
+        </h2>
+        <p class="text-primary-foreground/80 font-cairo mb-8 max-w-lg mx-auto">
+          تواصل معنا اليوم للحصول على استشارة وعرض سعر مخصص لمشروعك
+        </p>
+        <div class="flex gap-4 justify-center">
+          <ButtonContactUs />
+          <ButtonWhatsapp />
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-definePageMeta({
-  layout: "default",
-  title: "اعمالنا",
-});
-useHead({
-  title: "اعمالنا - العزل الذهبي",
-});
-</script>
+// Categories
+const categories = [
+  { id: "all", label: "الكل", icon: "i-heroicons-shield-check" },
+  { id: "waterproofing", label: "العزل المائي", icon: "i-heroicons-cloud" },
+  { id: "renovation", label: "الترميمات", icon: "i-heroicons-paint-brush" },
+  { id: "pest", label: "مكافحة الحشرات", icon: "i-heroicons-bug-ant" },
+  { id: "cleaning", label: "التنظيف", icon: "i-heroicons-sparkles" },
+  { id: "pools", label: "المسابح", icon: "i-heroicons-swimming-pool" },
+];
 
-<style scoped></style>
+// Projects
+const projects = [
+  {
+    id: 1,
+    image: "/images/work-waterproofing.jpg",
+    title: "عزل سطح مبنى سكني",
+    category: "waterproofing",
+    categoryLabel: "العزل المائي",
+    description:
+      "تنفيذ عزل مائي وحراري كامل لسطح مبنى سكني بمساحة ٥٠٠ متر مربع باستخدام أحدث المواد العازلة.",
+    tall: true,
+  },
+  {
+    id: 2,
+    image: "/images/work-tank.jpg",
+    title: "عزل خزان مياه أرضي",
+    category: "waterproofing",
+    categoryLabel: "العزل المائي",
+    description: "عزل خزان مياه أرضي بسعة ٢٠ طن مع ضمان ١٠ سنوات على العزل.",
+    tall: true,
+  },
+  {
+    id: 3,
+    image: "/images/work-bathroom.jpg",
+    title: "ترميم حمامات فاخرة",
+    category: "renovation",
+    categoryLabel: "الترميمات",
+    description: "ترميم وتجديد حمامات بتصميم عصري فاخر مع عزل مائي كامل.",
+  },
+  {
+    id: 4,
+    image: "/images/work-pest.jpg",
+    title: "مكافحة حشرات منزلية",
+    category: "pest",
+    categoryLabel: "مكافحة الحشرات",
+    description: "رش ومكافحة شاملة للصراصير وبق الفراش مع ضمان ٦ أشهر.",
+  },
+  {
+    id: 5,
+    image: "/images/work-cleaning.jpg",
+    title: "تنظيف مجلس عربي",
+    category: "cleaning",
+    categoryLabel: "التنظيف",
+    description: "تنظيف عميق لمجلس عربي فاخر مع تعقيم الأقمشة والسجاد.",
+  },
+  {
+    id: 6,
+    image: "/images/work-pool.jpg",
+    title: "عزل وترميم مسبح",
+    category: "pools",
+    categoryLabel: "المسابح",
+    description: "ترميم وعزل مسبح خاص مع تجديد البلاط وأنظمة الفلترة.",
+  },
+];
+
+// Stats
+const stats = [
+  { number: 1200, label: "مشروع منجز" },
+  { number: 98, label: "رضا العملاء" },
+  { number: 15, label: "سنة خبرة" },
+  { number: 50, label: "فني متخصص" },
+];
+
+// State
+const activeCategory = ref("all");
+
+// Computed
+const filtered = computed(() => {
+  return activeCategory.value === "all"
+    ? projects
+    : projects.filter((p) => p.category === activeCategory.value);
+});
+
+// Methods
+const setActiveCategory = (category) => {
+  activeCategory.value = category;
+};
+</script>

@@ -124,8 +124,6 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
-
 const currentYear = new Date().getFullYear();
 
 const services = [
@@ -138,7 +136,7 @@ const services = [
 const quickLinks = [
   { label: "الرئيسية", href: "/" },
   { label: "خدماتنا", href: "/services" },
-  { label: "من نحن", href: "/about" },
+  { label: "من نحن", href: "/whoUs" },
   { label: "أعمالنا", href: "/ourWork" },
   { label: "تواصل معنا", href: "/contactUs" },
 ];

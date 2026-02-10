@@ -26,6 +26,7 @@
           :color="item.color"
           :number="item.number"
           :label="item.label"
+          textColor="#ffffff"
         />
       </div>
     </Header>
