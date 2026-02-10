@@ -18,7 +18,7 @@
       data-aos-duration="800"
     >
       <div
-        class="container mx-auto flex flex-wrap justify-center gap-8 md:gap-16"
+        class="px-3 mx-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  justify-center gap-8 md:gap-16"
       >
         <counter
           v-for="(stat, index) in stats"
