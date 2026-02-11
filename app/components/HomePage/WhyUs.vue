@@ -41,7 +41,7 @@
           >
             <div class="flex items-start gap-4 mb-4">
               <div class="p-3 rounded-lg bg-primary/10">
-                <UIcon :name="feature.icon" class="w-6 h-6 text-primary" />
+                <Icon :name="feature.icon" class="w-6 h-6 text-primary" />
               </div>
               <div>
                 <h3 class="text-lg font-bold text-gray-900 mb-1">
@@ -87,7 +87,7 @@ const features = ref([
   {
     title: "صديق للبيئة",
     description: "مواد صديقة للبيئة وآمنة للعائلة",
-    icon: "i-heroicons-leaf",
+    icon: "ph:leaf-light",
   },
 ]);
 </script>
