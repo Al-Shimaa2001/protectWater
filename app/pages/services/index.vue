@@ -157,7 +157,7 @@ const services = [
   {
     id: "insulation",
     slug: "./insulation.vue",
-    icon: "i-heroicons-water-drop",
+    icon: "material-symbols:water-drop-outline",
     title: "العزل المائي والحراري",
     description:
       "نقدم خدمات عزل متكاملة للخزانات والأسطح والحمامات بأحدث التقنيات والمواد العازلة عالية الجودة",
@@ -202,7 +202,7 @@ const services = [
   {
     id: "pest-control",
     slug: "./pest-control.vue",
-    icon: "i-heroicons-bug",
+    icon: "lucide:bug",
     title: "مكافحة الحشرات",
     description:
       "خدمات شاملة لمكافحة جميع أنواع الحشرات والقوارض باستخدام مبيدات آمنة ومعتمدة",
