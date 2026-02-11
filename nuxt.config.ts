@@ -8,13 +8,17 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxtjs/color-mode"],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui"],
+  ui: {
+    colorMode: false,
+  },
   app: {
     head: {
       title: "العزل الذهبي",
       htmlAttrs: {
         lang: "ar",
       },
+      meta: [{ name: "color-scheme", content: "light only" }],
       link: [
         {
           rel: "icon",
@@ -49,10 +53,5 @@ export default defineNuxtConfig({
       ],
     },
     pageTransition: { name: "page", mode: "out-in" },
-  },
-  colorMode: {
-    preference: "light",
-    fallback: "light",
-    forced: true,
   },
 });
