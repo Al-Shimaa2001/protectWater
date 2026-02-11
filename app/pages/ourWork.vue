@@ -18,7 +18,7 @@
       data-aos-duration="800"
     >
       <div
-        class="px-3 mx-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  justify-center gap-8 md:gap-16"
+        class="px-3 mx-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-8 md:gap-16"
       >
         <counter
           v-for="(stat, index) in stats"
@@ -95,14 +95,20 @@
 </template>
 
 <script setup>
-// Categories
+definePageMeta({
+  title: "أعمالنا - حماية المياه",
+  description:
+    "استعرض مجموعة من مشاريعنا الناجحة في العزل المائي والحراري، الترميمات، مكافحة الحشرات، وتنظيف المجالس والحدائق. شاهد كيف نقدم حلولاً مبتكرة وجودة عالية لعملائنا في جميع أنحاء المملكة العربية السعودية.",
+
+});
+    // Categories
 const categories = [
   { id: "all", label: "الكل", icon: "i-heroicons-shield-check" },
   { id: "waterproofing", label: "العزل المائي", icon: "i-heroicons-cloud" },
   { id: "renovation", label: "الترميمات", icon: "i-heroicons-paint-brush" },
   { id: "pest", label: "مكافحة الحشرات", icon: "i-heroicons-bug-ant" },
   { id: "cleaning", label: "التنظيف", icon: "i-heroicons-sparkles" },
-  { id: "pools", label: "المسابح", icon: "i-heroicons-swimming-pool" },
+  { id: "pools", label: "المسابح", icon="guidance:swimming-pool"  },
 ];
 
 // Projects
