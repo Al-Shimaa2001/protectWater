@@ -103,7 +103,7 @@ const steps = ref([
     description: "فحص شامل للموقع باستخدام أجهزة متطورة",
   },
   {
-    icon: "i-heroicons-target",
+    icon: "si:target-line",
     number: "02",
     title: "تحديد المشكلة",
     description: "تحديد دقيق لمصدر التسرب أو الضعف",
