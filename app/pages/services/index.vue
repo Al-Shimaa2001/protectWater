@@ -65,7 +65,7 @@
                 </li>
               </ul>
 
-              <NuxtLink :to="service.slug">
+              <NuxtLink :to="service.link">
                 <UButton
                   color="primary"
                   variant="solid"
@@ -156,7 +156,7 @@ useHead({
 const services = [
   {
     id: "insulation",
-    slug: "./insulation.vue",
+    link: "/services/insulation",
     icon: "material-symbols:water-drop-outline",
     title: "العزل المائي والحراري",
     description:
@@ -171,7 +171,7 @@ const services = [
   },
   {
     id: "leak-detection",
-    slug: "./leak-detection.vue",
+    link: "/services/leak-detection",
     icon: "i-heroicons-magnifying-glass",
     title: "كشف التسربات",
     description:
@@ -186,7 +186,7 @@ const services = [
   },
   {
     id: "cleaning",
-    slug: "./cleaning.vue",
+    link: "/services/cleaning",
     icon: "i-heroicons-sparkles",
     title: "خدمات التنظيف",
     description:
@@ -201,7 +201,7 @@ const services = [
   },
   {
     id: "pest-control",
-    slug: "./pest-control.vue",
+    link: "/services/pest-control",
     icon: "lucide:bug",
     title: "مكافحة الحشرات",
     description:
