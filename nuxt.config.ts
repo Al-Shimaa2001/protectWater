@@ -8,9 +8,13 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui"],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxt/icon"],
   ui: {
     colorMode: false,
+  },
+  icon: {
+    provider: "iconify",
+    collections: ["heroicons", "simple-icons", "lucide"],
   },
   app: {
     head: {

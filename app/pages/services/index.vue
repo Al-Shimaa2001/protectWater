@@ -4,9 +4,9 @@
       <Header
         background="/images/hero-services.jpg"
         backgroundType="image"
-        overlay="true"
+        :overlay="true"
         overlayColor="var(--color-blue-800)"
-        overlayOpacity="0.5"
+        :overlayOpacity="0.5"
         height="100%"
         description="نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة"
       >

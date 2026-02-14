@@ -98,7 +98,7 @@ const stats = ref([
   { icon: "i-heroicons-clock", value: "15", label: "سنوات خبرة" },
   { icon: "i-heroicons-users", value: "5000", label: "عميل راضٍ" },
   { icon: "i-heroicons-building-office", value: "10000", label: "مشروع منجز" },
-  { icon: "i-heroicons-award", value: "10", label: "سنوات ضمان" },
+  { icon: "i-heroicons-shield-check", value: "10", label: "سنوات ضمان" },
 ]);
 const vision = ref([
   {

@@ -3,9 +3,9 @@
     <Header
       background="/images/hero-home.jpg"
       backgroundType="image"
-      overlay="true"
+      :overlay="true"
       overlayColor="var(--color-blue-800)"
-      overlayOpacity="0.5"
+      :overlayOpacity="0.5"
       height="100%"
       description="نقدم حلولاً متكاملة لحماية منزلك من التسربات والرطوبة بأحدث التقنيات وضمان يصل إلى 15 سنة"
     >
@@ -15,8 +15,8 @@
         وكشف تسربات المياه
       </h1>
       <div class="flex gap-4 justify-center my-3">
-        <ContactUs />
-        <Whatsapp />
+        <ButtonContactUs />
+        <ButtonWhatsapp />
       </div>
       <div class="my-3 flex items-center gap-5 justify-center">
         <Counter

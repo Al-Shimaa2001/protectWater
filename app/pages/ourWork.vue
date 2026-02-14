@@ -4,9 +4,9 @@
     <Header
       background="/images/hero-projects.jpg"
       backgroundType="image"
-      overlay="true"
+      :overlay="true"
       overlayColor="var(--color-secondary)"
-      overlayOpacity="0.6"
+      :overlayOpacity="0.6"
       height="100%"
       title="أعمالنا تتحدث عنّا"
       description="نفخر بتقديم خدمات بأعلى معايير الجودة في مجالات العزل والترميم ومكافحة الحشرات والتنظيف في جميع مناطق المملكة"

@@ -3,9 +3,9 @@
     <Header
       background="/images/hero-contact.jpg"
       backgroundType="image"
-      overlay="true"
+      :overlay="true"
       overlayColor="var(--color-blue-800)"
-      overlayOpacity="0.5"
+      :overlayOpacity="0.5"
       height="100%"
       description="تواصل معنا للاستفسار والخدمات - نحن هنا لمساعدتك في أي وقت"
     >
