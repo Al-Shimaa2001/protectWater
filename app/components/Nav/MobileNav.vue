@@ -15,6 +15,28 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: "/services",
     icon: "i-heroicons-wrench-screwdriver", // أو i-heroicons-cog-6-tooth
     active: route.path.startsWith("/services"),
+     children: [
+      {
+        label: "العزل المائي والحراري",
+        to: "/services/insulation",
+        active: route.path.startsWith("/services/insulation"),
+      },
+      {
+        label: "كشف التسربات",
+        to: "/services/leak-detection",
+        active: route.path.startsWith("/services/leak-detection"),
+      },
+      {
+        label: "خدمات التنظيف",
+        to: "/services/cleaning",
+        active: route.path.startsWith("/services/cleaning"),
+      },
+      {
+        label: "مكافحة الحشرات",
+        to: "/services/pest-control",
+        active: route.path.startsWith("/services/pest-control"),
+      },
+    ],
   },
   {
     label: "من نحن",
