@@ -65,16 +65,15 @@
                 </li>
               </ul>
 
-              <NuxtLink :to="service.link">
-                <UButton
-                  color="primary"
-                  variant="solid"
-                  class="w-full gap-2 bg-linear-to-l from-primary to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
-                >
-                  تفاصيل الخدمة
-                  <UIcon name="i-heroicons-arrow-left" class="w-4 h-4" />
-                </UButton>
-              </NuxtLink>
+              <UButton
+                color="primary"
+                variant="solid"
+                class="w-full gap-2 bg-linear-to-l from-primary to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
+                @click="goToService(service.id)"
+              >
+                تفاصيل الخدمة
+                <UIcon name="i-heroicons-arrow-left" class="w-4 h-4" />
+              </UButton>
             </div>
           </div>
         </div>
@@ -216,6 +215,10 @@ const services = [
   },
 ];
 
+const goToService = (serviceId) => {
+  navigateTo(`/services/${serviceId}`);
+  console.log(serviceId);
+};
 // Color Classes for Service Cards
 const colorClasses = {
   water: "bg-blue-50 text-blue-600 border-blue-200",

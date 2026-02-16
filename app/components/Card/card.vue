@@ -16,8 +16,9 @@
     </div>
 
     <template v-if="footer" #footer>
-      <button
-        class="focus:bg-primary-600 hover:bg-primary-600 focus:text-white hover:text-white px-4 py-2 rounded-md flex items-center gap-x-3"
+      <NuxtLink
+        class="focus:bg-primary-600 hover:bg-primary-600 focus:text-white hover:text-white px-4 py-2 rounded-md flex items-center gap-x-3 cursor-pointer"
+        :to="`/services/${service.id}`"
       >
         <p>
           {{ footer }}
@@ -28,7 +29,7 @@
           height="24"
           style="color: #ffffff"
         />
-      </button>
+      </NuxtLink>
     </template>
   </UCard>
 </template>
@@ -37,6 +38,7 @@ defineProps({
   name: { type: String, default: "i-heroicons-photo" },
   header: { type: String },
   details: { type: String },
-  footer: { type: String     },
+  footer: { type: String },
+  service: { type: Object },
 });
 </script>

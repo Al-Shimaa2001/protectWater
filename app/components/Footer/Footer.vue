@@ -6,7 +6,7 @@
     data-aos-duration="800"
   >
     <!-- Main Footer -->
-    <div class="container mx-auto px-4 py-16">
+    <UContainer class="mx-auto px-4 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- Company Info -->
         <div data-aos="fade-up" data-aos-delay="100">
@@ -64,7 +64,7 @@
             >
               <NuxtLink
                 :to="link.href"
-                class="text-gray-400 hover:text-amber-400 transition-colors text-sm"
+                class="text-gray-400 hover:text-amber-400 text-sm"
               >
                 {{ link.label }}
               </NuxtLink>
@@ -96,29 +96,29 @@
           </ul>
         </div>
       </div>
-    </div>
+    </UContainer>
 
     <!-- Bottom Bar -->
     <div class="border-t border-gray-800">
-      <div
-        class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4"
+      <UContainer
+        class="mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4"
       >
         <p class="text-sm text-gray-400">
           © {{ currentYear }} العزل الذهبي. جميع الحقوق محفوظة
         </p>
         <div class="flex items-center gap-6">
-          <a
+          <NuxtLink
             v-for="(link, index) in bottomLinks"
             :key="index"
-            :href="link.href"
+            :to="link.href"
             class="text-sm text-gray-400 hover:text-amber-400 transition-colors"
             data-aos="fade-left"
             :data-aos-delay="100 * index"
           >
             {{ link.label }}
-          </a>
+          </NuxtLink>
         </div>
-      </div>
+      </UContainer>
     </div>
   </footer>
 </template>
@@ -127,10 +127,10 @@
 const currentYear = new Date().getFullYear();
 
 const services = [
-  { label: "العزل المائي والحراري", href: "/services#insulation" },
-  { label: "كشف التسربات", href: "/services#leak-detection" },
-  { label: "خدمات التنظيف", href: "/services#cleaning" },
-  { label: "مكافحة الحشرات", href: "/services#pest-control" },
+  { label: "العزل المائي والحراري", href: "/services/insulation" },
+  { label: "كشف التسربات", href: "/services/leak-detection" },
+  { label: "خدمات التنظيف", href: "/services/cleaning" },
+  { label: "مكافحة الحشرات", href: "/services/pest-control" },
 ];
 
 const quickLinks = [

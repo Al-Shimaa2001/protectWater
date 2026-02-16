@@ -7,12 +7,13 @@
     />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
       <Card
-        v-for="(service, index) in services"
-        :key="index"
+        v-for="service in services"
+        :key="service.id"
         :name="service.nameIcon"
         :header="service.title"
         :details="service.details"
         :footer="service.footer"
+        :service="service"
         class="hover:shadow-lg transition-shadow duration-300 hover:border-primary/50"
         data-aos="fade-up"
       />
@@ -21,8 +22,15 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'خدماتنا المتكاملة',
+  meta: [
+    { name: 'description', content: 'نقدم خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات' }
+  ]
+})
 const services = [
   {
+    id: "leak-detection",
     nameIcon: "healthicons:magnifying-glass-outline",
     title: "كشف التسربات",
     details:
@@ -30,6 +38,7 @@ const services = [
     footer: "اعرف المزيد",
   },
   {
+    id: "insulation",
     nameIcon: "lucide:droplets",
     title: "العزل المائي والحراري",
     details:
@@ -37,6 +46,7 @@ const services = [
     footer: "اعرف المزيد",
   },
   {
+    id: "cleaning",
     nameIcon: "heroicons:sparkles",
     title: "خدمات التنظيف",
     details:
@@ -44,6 +54,7 @@ const services = [
     footer: "اعرف المزيد",
   },
   {
+    id: "pest-control",
     nameIcon: "heroicons:bug-ant",
     title: "مكافحة الحشرات",
     details:
