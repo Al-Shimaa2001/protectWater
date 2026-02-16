@@ -1,15 +1,10 @@
 <template>
-  <footer
-    id="contact"
-    class="bg-gray-900 text-white"
-    data-aos="fade-up"
-    data-aos-duration="800"
-  >
+  <footer id="contact" class="bg-gray-900 text-white">
     <!-- Main Footer -->
     <UContainer class="mx-auto px-4 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- Company Info -->
-        <div data-aos="fade-up" data-aos-delay="100">
+        <div>
           <NuxtLink to="/" class="flex items-center gap-3 mb-6">
             <div
               class="flex bg-blue-500 rounded-lg p-1 items-center justify-center me-2 shadow-blue-200"
@@ -33,15 +28,10 @@
         </div>
 
         <!-- Services -->
-        <div data-aos="fade-up" data-aos-delay="200">
+        <div>
           <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
           <ul class="space-y-3">
-            <li
-              v-for="(service, index) in services"
-              :key="index"
-              data-aos="fade-up"
-              :data-aos-delay="200 + index * 50"
-            >
+            <li v-for="(service, index) in services" :key="index">
               <NuxtLink
                 :to="service.href"
                 class="text-gray-400 hover:text-amber-400 transition-colors text-sm"
@@ -53,15 +43,10 @@
         </div>
 
         <!-- Quick Links -->
-        <div data-aos="fade-up" data-aos-delay="300">
+        <div>
           <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
           <ul class="space-y-3">
-            <li
-              v-for="(link, index) in quickLinks"
-              :key="index"
-              data-aos="fade-up"
-              :data-aos-delay="300 + index * 50"
-            >
+            <li v-for="(link, index) in quickLinks" :key="index">
               <NuxtLink
                 :to="link.href"
                 class="text-gray-400 hover:text-amber-400 text-sm"
@@ -73,15 +58,13 @@
         </div>
 
         <!-- Contact Info -->
-        <div data-aos="fade-up" data-aos-delay="400">
+        <div>
           <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
           <ul class="space-y-4">
             <li
               v-for="(contact, index) in contactInfo"
               :key="index"
               class="flex items-center gap-3"
-              data-aos="fade-up"
-              :data-aos-delay="400 + index * 100"
             >
               <div
                 class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center"
@@ -112,8 +95,6 @@
             :key="index"
             :to="link.href"
             class="text-sm text-gray-400 hover:text-amber-400 transition-colors"
-            data-aos="fade-left"
-            :data-aos-delay="100 * index"
           >
             {{ link.label }}
           </NuxtLink>
