@@ -14,8 +14,7 @@
     <!-- Stats -->
     <section
       class="py-12 border bg-card"
-      data-aos="fade-up"
-      data-aos-duration="800"
+   
     >
       <div
         class="px-3 mx-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-8 md:gap-16"
@@ -35,8 +34,7 @@
       <div class="container mx-auto">
         <div
           class="flex flex-wrap justify-center gap-3 mb-12"
-          data-aos="fade-up"
-          data-aos-duration="800"
+        
         >
           <UButton
             v-for="cat in categories"
@@ -63,8 +61,7 @@
             :category="project.categoryLabel"
             :description="project.description"
             :tall="project.tall"
-            :data-aos="'fade-up'"
-            :data-aos-delay="(index % 3) * 100"
+          
           />
         </div>
       </div>
@@ -73,8 +70,7 @@
     <!-- CTA -->
     <section
       class="py-16 px-4 bg-secondary"
-      data-aos="zoom-in"
-      data-aos-duration="800"
+     data-usal="fade-u"
     >
       <div class="container mx-auto text-center">
         <h2

@@ -2,8 +2,7 @@
   <section
     id="faq"
     class="py-16 md:py-24 bg-background"
-    data-aos="fade-up"
-    data-aos-duration="800"
+
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-5xl mx-auto">
@@ -14,7 +13,7 @@
           description="إليك إجابات على أكثر الأسئلة شيوعاً حول خدماتنا. انقر على أي سؤال لعرض الإجابة"
         />
         <!-- FAQ Accordion - Same for mobile and desktop -->
-        <div class="mt-8 md:mt-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="mt-8 md:mt-12" >
           <UAccordion
             :items="faqItems"
             :multiple="false"

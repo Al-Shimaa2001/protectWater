@@ -8,13 +8,9 @@
         overlayColor="var(--color-blue-800)"
         :overlayOpacity="0.5"
         height="100%"
-        description="نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة"
+        :description="pageContent.header.description"
       >
-        <div
-          class="flex gap-4 justify-center my-3"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
+        <div class="flex gap-4 justify-center my-3">
           <ButtonContactUs />
           <ButtonWhatsapp />
         </div>
@@ -29,14 +25,9 @@
               v-for="(service, index) in services"
               :key="service.id"
               class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:border-primary/20 hover:-translate-y-1 transition-all duration-300"
-              :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-              :data-aos-delay="index * 100"
-              data-aos-duration="800"
             >
               <div
                 :class="`w-16 h-16 rounded-2xl ${colorClasses[service.color]} flex items-center justify-center mb-6`"
-                data-aos="zoom-in"
-                data-aos-delay="300"
               >
                 <UIcon :name="service.icon" class="w-8 h-8" />
               </div>
@@ -54,8 +45,6 @@
                   v-for="(feature, i) in service.features"
                   :key="i"
                   class="flex items-center gap-3"
-                  data-aos="fade-up"
-                  :data-aos-delay="100 + i * 50"
                 >
                   <UIcon
                     name="i-heroicons-check-circle"
@@ -71,7 +60,7 @@
                 class="w-full gap-2 bg-linear-to-l from-primary to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white"
                 @click="goToService(service.id)"
               >
-                تفاصيل الخدمة
+                {{ pageContent.services.buttonText }}
                 <UIcon name="i-heroicons-arrow-left" class="w-4 h-4" />
               </UButton>
             </div>
@@ -84,17 +73,13 @@
         class="flex flex-col items-center justify-center py-20 bg-linear-to-br from-primary-50 to-blue-50"
       >
         <div class="container">
-          <div
-            class="max-w-4xl mx-auto"
-            data-aos="fade-up"
-            data-aos-duration="800"
-          >
+          <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                حجز خدمة سريع
+                {{ pageContent.booking.title }}
               </h2>
               <p class="text-gray-600 text-lg">
-                اختر الخدمة المطلوبة تواصل معانا فوراً
+                {{ pageContent.booking.subtitle }}
               </p>
             </div>
 
@@ -105,8 +90,6 @@
                 v-for="feature in bookingFeatures"
                 :key="feature.title"
                 class="text-center"
-                data-aos="fade-up"
-                :data-aos-delay="feature.delay"
               >
                 <div
                   class="w-16 h-16 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-4"
@@ -123,8 +106,6 @@
             </div>
             <div
               class="flex gap-4 items-center justify-center my-3 py-4 w-full"
-              data-aos="fade-up"
-              data-aos-delay="100"
             >
               <ButtonContactUs />
               <ButtonWhatsapp />
@@ -142,16 +123,32 @@ definePageMeta({
   description:
     "نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة",
 });
+
+// Page content constants
+const pageContent = {
+  header: {
+    description:
+      "نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة",
+  },
+  services: {
+    buttonText: "تفاصيل الخدمة",
+  },
+  booking: {
+    title: "حجز خدمة سريع",
+    subtitle: "اختر الخدمة المطلوبة تواصل معانا فوراً",
+  },
+};
+
 useHead({
   title: "خدماتنا - حماية المياه",
   meta: [
     {
       name: "description",
-      content:
-        "نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة",
+      content: pageContent.header.description,
     },
   ],
 });
+
 const services = [
   {
     id: "insulation",
@@ -217,8 +214,8 @@ const services = [
 
 const goToService = (serviceId) => {
   navigateTo(`/services/${serviceId}`);
-  console.log(serviceId);
 };
+
 // Color Classes for Service Cards
 const colorClasses = {
   water: "bg-blue-50 text-blue-600 border-blue-200",

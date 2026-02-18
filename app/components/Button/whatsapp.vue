@@ -8,12 +8,13 @@
       icon="i-heroicons-chat-bubble-left-right"
       aria-label="WhatsApp Button"
     >
-      تواصل عبر الواتساب
+      {{ contactText }}
     </UButton>
   </UTooltip>
 </template>
 
 <script setup>
+const contactText = " تواصل عبر الواتساب";
 const openWhatsApp = () => {
   const phone = "201552807664"; // اكتب الرقم هنا مع كود الدولة وبدون أصفار أو علامة +
   const message = encodeURIComponent("مرحباً، أود الاستفسار عن خدماتكم");

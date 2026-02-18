@@ -9,18 +9,17 @@
       height="100%"
       description="تواصل معنا للاستفسار والخدمات - نحن هنا لمساعدتك في أي وقت"
     >
-      <div
-        class="flex gap-4 justify-center my-7"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
+      <div class="flex gap-4 justify-center my-7" data-usal="fade-d">
         <ButtonContactUs />
         <ButtonWhatsapp />
       </div>
     </Header>
     <main class="pt-20">
       <!-- Contact Content -->
-      <section class="py-20 flex flex-col justify-center items-center">
+      <section
+        class="py-20 flex flex-col justify-center items-center"
+        data-usal="fade-u"
+      >
         <div
           class="container flex flex-col justify-center gap-4 items-center max-w-4xl"
         >
@@ -30,8 +29,6 @@
               v-for="(item, index) in contactInfo"
               :key="index"
               class="bg-card rounded-2xl p-6 shadow-card border border-border hover:border-primary/20 transition-colors"
-              :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
-              :data-aos-delay="index * 100"
             >
               <div
                 class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
@@ -49,8 +46,6 @@
           <!-- Working Hours -->
           <div
             class="bg-card rounded-2xl p-6 shadow-card border border-border mb-8"
-            data-aos="fade-up"
-            data-aos-delay="200"
           >
             <div class="flex items-center gap-3 mb-6">
               <div
@@ -65,8 +60,6 @@
                 v-for="(item, index) in workingHours"
                 :key="index"
                 class="flex justify-between items-center py-3 border-b border-border last:border-0"
-                :data-aos="'fade-up'"
-                :data-aos-delay="300 + index * 100"
               >
                 <span class="font-medium text-foreground">{{ item.day }}</span>
                 <span class="text-muted-foreground">{{ item.hours }}</span>
@@ -75,11 +68,7 @@
           </div>
 
           <!-- Quick Contact Buttons -->
-          <div
-            class="flex items-center gap-4"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
+          <div class="flex items-center gap-4">
             <ButtonContactUs />
             <ButtonWhatsapp />
           </div>

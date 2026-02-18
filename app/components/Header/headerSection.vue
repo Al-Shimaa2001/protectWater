@@ -5,15 +5,22 @@
       variant="subtle"
       size="lg"
       class="mb-4 inline-block"
+      v-usal="'fade-u duration-500'"
     >
       {{ mainTitle }}
     </UBadge>
 
-    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+      v-usal="'fade-u duration-500'"
+    >
       {{ subTitle }}
     </h2>
 
-    <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+    <p
+      class="text-gray-600 max-w-2xl mx-auto text-lg"
+      v-usal="'fade-u duration-500'"
+    >
       {{ description }}
     </p>
   </div>

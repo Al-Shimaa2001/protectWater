@@ -52,6 +52,8 @@ const items = computed<NavigationMenuItem[]>(() => [
     active: route.path.startsWith("/"),
   },
 ]);
+const companyName = "العزل الذهبي";
+const subtitle = "للعزل وكشف التسريبات ";
 </script>
 
 <template>
@@ -69,8 +71,8 @@ const items = computed<NavigationMenuItem[]>(() => [
           />
         </div>
         <div class="flex flex-col">
-          <h1 class="text-lg font-bold text-foreground">العزل الذهبي</h1>
-          <span class="text-xs text-muted">للعزل وكشف التسريبات </span>
+          <h1 class="text-lg font-bold text-foreground">{{ companyName }}</h1>
+          <span class="text-xs text-muted">{{ subtitle }}</span>
         </div>
       </NuxtLink>
     </template>

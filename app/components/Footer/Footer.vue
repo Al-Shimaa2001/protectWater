@@ -17,19 +17,20 @@
               />
             </div>
             <div class="flex flex-col">
-              <h1 class="text-lg font-bold text-foreground">العزل الذهبي</h1>
-              <span class="text-xs text-muted">للعزل وكشف التسريبات </span>
+              <h1 class="text-lg font-bold text-foreground">
+                {{ companyName }}
+              </h1>
+              <span class="text-xs text-muted">{{ companyTagline }}</span>
             </div>
           </NuxtLink>
           <p class="text-gray-400 text-sm leading-relaxed mb-6">
-            شركة متخصصة في العزل والتنظيف ومكافحة الحشرات بأحدث التقنيات وضمان
-            يصل إلى 10 سنوات
+            {{ companyDescription }}
           </p>
         </div>
 
         <!-- Services -->
         <div>
-          <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+          <h4 class="text-lg font-bold mb-6">{{ servicesTitle }}</h4>
           <ul class="space-y-3">
             <li v-for="(service, index) in services" :key="index">
               <NuxtLink
@@ -44,7 +45,7 @@
 
         <!-- Quick Links -->
         <div>
-          <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+          <h4 class="text-lg font-bold mb-6">{{ quickLinksTitle }}</h4>
           <ul class="space-y-3">
             <li v-for="(link, index) in quickLinks" :key="index">
               <NuxtLink
@@ -59,7 +60,7 @@
 
         <!-- Contact Info -->
         <div>
-          <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
+          <h4 class="text-lg font-bold mb-6">{{ contactTitle }}</h4>
           <ul class="space-y-4">
             <li
               v-for="(contact, index) in contactInfo"
@@ -87,7 +88,8 @@
         class="mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4"
       >
         <p class="text-sm text-gray-400">
-          © {{ currentYear }} العزل الذهبي. جميع الحقوق محفوظة
+          {{ copyrightText }} {{ time }} {{ companyName }}.
+          {{ rightsReservedText }}
         </p>
         <div class="flex items-center gap-6">
           <NuxtLink
@@ -105,7 +107,25 @@
 </template>
 
 <script setup>
-const currentYear = new Date().getFullYear();
+const time = ref("");
+const mounted = ref(false);
+
+onMounted(() => {
+  time.value = new Date().getFullYear();
+  mounted.value = true;
+});
+
+const companyName = "العزل الذهبي";
+const companyTagline = "للعزل وكشف التسريبات";
+const companyDescription =
+  "شركة متخصصة في العزل والتنظيف ومكافحة الحشرات بأحدث التقنيات وضمان يصل إلى 10 سنوات";
+
+const servicesTitle = "خدماتنا";
+const quickLinksTitle = "روابط سريعة";
+const contactTitle = "تواصل معنا";
+
+const copyrightText = "©";
+const rightsReservedText = "جميع الحقوق محفوظة";
 
 const services = [
   { label: "العزل المائي والحراري", href: "/services/insulation" },

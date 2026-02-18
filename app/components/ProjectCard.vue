@@ -6,7 +6,7 @@
     ]"
   >
     <div
-      class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"
+      class="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent z-10"
     />
     <img
       :src="image"
@@ -25,7 +25,6 @@
       <p class="text-white/90 font-cairo text-sm mb-3 line-clamp-2">
         {{ description }}
       </p>
-   
     </div>
   </div>
 </template>

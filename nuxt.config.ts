@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxt/icon"],
+ modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxt/icon",'@usal/vue/nuxt'],
   ui: {
     colorMode: false,
   },

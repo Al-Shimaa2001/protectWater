@@ -1,9 +1,11 @@
 <template>
   <div class="p-2 bg-primary rounded-md text-center cursor-pointer">
-    اعرف المزيد
+    {{ showMore }}
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const showMore = "اعرف المزيد";
+</script>
 
 <style scoped></style>

@@ -1,6 +1,5 @@
 <template>
   <UCard
-    data-aos="fade-up"
     variant="outlined"
     class="flex flex-col items-start rounded-lg border border-gray-200 p-2 h-full"
   >

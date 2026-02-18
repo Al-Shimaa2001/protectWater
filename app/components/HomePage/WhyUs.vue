@@ -8,10 +8,9 @@
             mainTitle="لماذا تختارنا"
             subTitle="نحن الخيار الأمثل لحماية منزلك"
             description="مع خبرة تتجاوز 15 عاماً في مجال العزل وكشف التسربات، نضمن لك خدمة احترافية ونتائج مضمونة بنسبة 100%"
-            data-aos="fade-up"
           />
           <!-- Certifications -->
-          <div data-aos="fade-up" class="space-y-3">
+          <div class="space-y-3" data-usal="fade-d">
             <div
               v-for="(cert, index) in certifications"
               :key="index"
@@ -27,7 +26,7 @@
         </div>
 
         <!-- Features Grid -->
-        <div data-aos="fade-up" class="grid sm:grid-cols-2 gap-6">
+        <div class="grid sm:grid-cols-2 gap-6" data-usal="fade-u split-word">
           <UCard
             v-for="(feature, index) in features"
             :key="index"

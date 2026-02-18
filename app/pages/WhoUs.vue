@@ -11,10 +11,10 @@
     />
     <main class="pt-20">
       <!-- About Content -->
-      <section class="py-20 bg-background">
+      <section class="py-20 bg-background" data-usal="fade-u">
         <UContainer>
           <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div>
               <UBadge size="lg" color="primary" variant="soft" class="mb-4">
                 قصتنا
               </UBadge>
@@ -40,9 +40,6 @@
             <Counter
               v-for="(stat, index) in stats"
               :key="index"
-              :data-aos="'fade-up'"
-              :data-aos-delay="index * 100"
-              data-aos-duration="800"
               :icon="stat.icon"
               :number="stat.value"
               :label="stat.label"
@@ -55,9 +52,6 @@
             <Card
               v-for="(item, index) in vision"
               :key="index"
-              :data-aos="'fade-up'"
-              :data-aos-delay="index * 100"
-              data-aos-duration="800"
               :name="item.icon"
               :header="item.title"
               :details="item.description"
@@ -71,9 +65,6 @@
             <Card
               v-for="(value, index) in values"
               :key="index"
-              :data-aos="'fade-up'"
-              :data-aos-delay="index * 100"
-              data-aos-duration="800"
               :name="value.icon"
               :header="value.title"
               :details="value.description"

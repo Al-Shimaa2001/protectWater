@@ -1,5 +1,5 @@
 <template>
-  <section id="process" class="py-24 bg-white overflow-hidden" >
+  <section id="process" class="py-24 bg-white overflow-hidden">
     <UContainer class="relative">
       <!-- عنوان القسم -->
       <div class="text-center mb-16">
@@ -9,15 +9,15 @@
           size="lg"
           class="mb-4 inline-block"
         >
-          كيف نعمل
+          {{ sectionBadge }}
         </UBadge>
 
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          خطوات العمل لدينا
+          {{ sectionTitle }}
         </h2>
 
         <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-          نتبع منهجية علمية واضحة لضمان أفضل النتائج
+          {{ sectionDescription }}
         </p>
       </div>
 
@@ -92,10 +92,19 @@
   </section>
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+const sectionBadge = "كيف نعمل";
+const sectionTitle = "خطوات العمل لدينا";
+const sectionDescription = "نتبع منهجية علمية واضحة لضمان أفضل النتائج";
 
-const steps = ref([
+interface Step {
+  icon: string;
+  number: string;
+  title: string;
+  description: string;
+}
+
+const steps: Step[] = [
   {
     icon: "i-heroicons-magnifying-glass",
     number: "01",
@@ -126,7 +135,7 @@ const steps = ref([
     title: "الضمان",
     description: "تسليم شهادة ضمان معتمدة",
   },
-]);
+];
 </script>
 
 <style scoped>

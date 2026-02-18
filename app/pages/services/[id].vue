@@ -51,8 +51,8 @@
       <div
         class="bg-secondary text-white my-5 flex justify-center items-center flex-col gap-5 rounded-2xl p-3"
       >
-        <h1 class="text-xl font-bold">اطلب الخدمة الان</h1>
-        <p class="text-sm">احصل على استشارة وعرض سعر مخصص</p>
+        <h1 class="text-xl font-bold">{{ serviceRequest }}</h1>
+        <p class="text-sm">{{ price }}</p>
         <ButtonContactUs />
       </div>
     </section>
@@ -62,16 +62,16 @@
 <script setup>
 import { servicesList } from "~/data/services";
 
-// الحصول على معرّف الخدمة من الرابط
+const serviceRequest = "اطلب الخدمة الان";
+const price = "احصل على استشارة وعرض سعر مخصص";
+
 const route = useRoute();
 const serviceId = route.params.id;
 
-// البحث عن الخدمة المطلوبة
 const service = computed(() => {
   return servicesList.find((s) => s.slug === serviceId);
 });
 
-// تحديث عنوان الصفحة وSEO حسب الخدمة
 useHead({
   title: computed(() =>
     service.value ? `${service.value.title} - شركتنا` : "الخدمة غير موجودة",
@@ -86,7 +86,6 @@ useHead({
   ],
 });
 
-// لو الخدمة غير موجودة، توجيه لصفحة 404
 if (!service.value) {
   throw createError({ statusCode: 404, message: "الخدمة غير موجودة" });
 }

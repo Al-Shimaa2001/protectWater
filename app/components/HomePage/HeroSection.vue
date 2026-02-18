@@ -7,12 +7,15 @@
       overlayColor="var(--color-blue-800)"
       :overlayOpacity="0.5"
       height="100%"
-      description="نقدم حلولاً متكاملة لحماية منزلك من التسربات والرطوبة بأحدث التقنيات وضمان يصل إلى 15 سنة"
+      :description="headerDescription"
     >
-      <h1 class="text-4xl md:text-5xl lg:text-6xl my-2">
-        شركة متخصصة في
-        <p class="text-orange-300 pt-2 my-2 pb-6">العزل المائي والحراري</p>
-        وكشف تسربات المياه
+      <h1
+        class="text-4xl md:text-5xl lg:text-6xl my-2"
+        data-usal="fade-u split-word"
+      >
+        {{ headerTitle1 }}
+        <p class="text-orange-300 pt-2 my-2 pb-6">{{ headerHighlightText }}</p>
+        {{ headerTitle2 }}
       </h1>
       <div class="flex gap-4 justify-center my-3">
         <ButtonContactUs />
@@ -33,13 +36,29 @@
   </div>
 </template>
 
-<script setup>
-const counterData = ref([
+<script setup lang="ts">
+// ========== Header Texts ==========
+const headerDescription =
+  "نقدم حلولاً متكاملة لحماية منزلك من التسربات والرطوبة بأحدث التقنيات وضمان يصل إلى 15 سنة";
+const headerTitle1 = "شركة متخصصة في";
+const headerHighlightText = "العزل المائي والحراري";
+const headerTitle2 = "وكشف تسربات المياه";
+
+// ========== Counter Data Interface ==========
+interface CounterItem {
+  icon: string;
+  color: string;
+  number: number;
+  label: string;
+}
+
+// ========== Counter Data ==========
+const counterData: CounterItem[] = [
   {
     icon: "i-heroicons-clock",
     color: "primary",
     number: 15,
-    label: "سنوات خبرة معتمدة ",
+    label: "سنوات خبرة معتمدة",
   },
   {
     icon: "i-heroicons-user-group",
@@ -47,7 +66,7 @@ const counterData = ref([
     number: 5000,
     label: "عملاء سعداء",
   },
-]);
+];
 </script>
 
 <style scoped></style>

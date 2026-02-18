@@ -15,7 +15,6 @@
         :footer="service.footer"
         :service="service"
         class="hover:shadow-lg transition-shadow duration-300 hover:border-primary/50"
-        data-aos="fade-up"
       />
     </div>
   </main>
@@ -23,11 +22,14 @@
 
 <script setup>
 useHead({
-  title: 'خدماتنا المتكاملة',
+  title: "خدماتنا المتكاملة",
   meta: [
-    { name: 'description', content: 'نقدم خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات' }
-  ]
-})
+    {
+      name: "description",
+      content: "نقدم خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات",
+    },
+  ],
+});
 const services = [
   {
     id: "leak-detection",

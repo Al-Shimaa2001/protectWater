@@ -7,13 +7,14 @@
         icon="i-heroicons-phone-arrow-up-right"
         @click="makeCall"
       >
-        اتصل الآن
+        {{ callUs }}
       </UButton>
     </UTooltip>
   </div>
 </template>
 
 <script setup>
+const callUs = "اتصل الآن";
 const makeCall = () => {
   const phoneNumber = "01552807664"; // استبدل هذا بالرقم الذي تريده
   window.location.href = `tel:${phoneNumber}`;

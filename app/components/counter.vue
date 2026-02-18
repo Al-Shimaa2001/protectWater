@@ -47,8 +47,6 @@ onMounted(() => {
 
 <template>
   <UCard
-    data-aos="zoom-in"
-    data-aos-duration="1000"
     class="text-center bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all duration-300"
   >
     <div class="mb-4" :style="{ color: textColor }">
