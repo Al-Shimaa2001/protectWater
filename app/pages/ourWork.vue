@@ -70,7 +70,7 @@
     <!-- CTA -->
     <section
       class="py-16 px-4 bg-secondary"
-     data-usal="fade-u"
+     data-usal="fade-d"
     >
       <div class="container mx-auto text-center">
         <h2

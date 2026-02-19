@@ -8,9 +8,10 @@
     <div
       class="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent z-10"
     />
-    <img
+    <NuxtImg
       :src="image"
       :alt="title"
+      loading="lazy"
       class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
     />
     <div class="relative z-20 h-full flex flex-col justify-end p-6">

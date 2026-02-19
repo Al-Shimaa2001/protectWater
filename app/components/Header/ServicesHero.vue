@@ -28,13 +28,13 @@
       </p>
 
       <slot></slot>
-      <UButton
-        @click="navigateToServicePage()"
+      <NuxtLink to="/services" external
+       data-usal="fade-d"
         class="inline-flex bg-primary items-center gap-2 text-sm p-3 rounded-xl mb-6 transition-colors"
       >
         <Icon name="i-heroicons-arrow-right" class="w-4 h-4" />
         العودة للخدمات
-      </UButton>
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -98,9 +98,6 @@ const overlayStyle = computed(() => ({
   opacity: props.overlayOpacity.toString(),
 }));
 
-const navigateToServicePage = () => {
-  navigateTo("/services");
-};
 </script>
 
 <style scoped>
