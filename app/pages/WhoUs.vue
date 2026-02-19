@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen">
     <Header
-      background="/images/hero-about.jpg"
+      background="/images/hero-about-min.jpg"
       backgroundType="image"
       overlay="true"
       overlayColor="var(--color-blue-800)"

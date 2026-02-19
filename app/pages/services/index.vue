@@ -2,7 +2,7 @@
   <div class="min-h-screen">
     <main class="">
       <Header
-        background="/images/hero-services.jpg"
+        background="/images/hero-services-min.jpg"
         backgroundType="image"
         :overlay="true"
         overlayColor="var(--color-blue-800)"

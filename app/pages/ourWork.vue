@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-background">
     <!-- Hero Section -->
     <Header
-      background="/images/hero-projects.jpg"
+      background="/images/hero-projects-min.jpg"
       backgroundType="image"
       :overlay="true"
       overlayColor="var(--color-secondary)"
@@ -12,10 +12,7 @@
       description="نفخر بتقديم خدمات بأعلى معايير الجودة في مجالات العزل والترميم ومكافحة الحشرات والتنظيف في جميع مناطق المملكة"
     />
     <!-- Stats -->
-    <section
-      class="py-12 border bg-card"
-   
-    >
+    <section class="py-12 border bg-card">
       <div
         class="px-3 mx-3 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-8 md:gap-16"
       >
@@ -32,10 +29,7 @@
     <!-- Filter Tabs -->
     <section class="py-10 px-4">
       <div class="container mx-auto">
-        <div
-          class="flex flex-wrap justify-center gap-3 mb-12"
-        
-        >
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
           <UButton
             v-for="cat in categories"
             :key="cat.id"
@@ -61,17 +55,13 @@
             :category="project.categoryLabel"
             :description="project.description"
             :tall="project.tall"
-          
           />
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section
-      class="py-16 px-4 bg-secondary"
-     data-usal="fade-d"
-    >
+    <section class="py-16 px-4 bg-secondary" data-usal="fade-d">
       <div class="container mx-auto text-center">
         <h2
           class="text-3xl md:text-4xl font-cairo font-black text-primary-foreground mb-4"
