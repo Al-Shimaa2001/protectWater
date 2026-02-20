@@ -37,14 +37,12 @@
 </template>
 
 <script setup lang="ts">
-// ========== Header Texts ==========
 const headerDescription =
   "نقدم حلولاً متكاملة لحماية منزلك من التسربات والرطوبة بأحدث التقنيات وضمان يصل إلى 15 سنة";
 const headerTitle1 = "شركة متخصصة في";
 const headerHighlightText = "العزل المائي والحراري";
 const headerTitle2 = "وكشف تسربات المياه";
 
-// ========== Counter Data Interface ==========
 interface CounterItem {
   icon: string;
   color: string;
@@ -52,7 +50,6 @@ interface CounterItem {
   label: string;
 }
 
-// ========== Counter Data ==========
 const counterData: CounterItem[] = [
   {
     icon: "i-heroicons-clock",

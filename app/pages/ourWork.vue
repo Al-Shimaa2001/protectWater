@@ -48,7 +48,7 @@
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-[240px]"
         >
           <ProjectCard
-            v-for="(project, index) in filtered"
+            v-for="project in filtered"
             :key="project.id"
             :image="project.image"
             :title="project.title"
@@ -82,11 +82,20 @@
 
 <script setup>
 definePageMeta({
-  title: "أعمالنا - حماية المياه",
+  title: "أعمالنا -  شركة العزل الذهبي",
   description:
     "استعرض مجموعة من مشاريعنا الناجحة في العزل المائي والحراري، الترميمات، مكافحة الحشرات، وتنظيف المجالس والحدائق. شاهد كيف نقدم حلولاً مبتكرة وجودة عالية لعملائنا في جميع أنحاء المملكة العربية السعودية.",
 });
-
+useHead({
+  title: "أعمالنا -  شركة العزل الذهبي",
+  meta: [
+    {
+      name: "description",
+      content:
+        "استعرض مجموعة من مشاريعنا الناجحة في العزل المائي والحراري، الترميمات، مكافحة الحشرات، وتنظيف المجالس والحدائق. شاهد كيف نقدم حلولاً مبتكرة وجودة عالية لعملائنا في جميع أنحاء المملكة العربية السعودية.",
+    },
+  ],
+});
 const question = "هل لديك مشروع يحتاج تنفيذ؟";
 const contactUsText =
   "   تواصل معنا اليوم للحصول على استشارة وعرض سعر مخصص لمشروعك";
