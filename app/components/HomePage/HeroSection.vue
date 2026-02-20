@@ -9,14 +9,14 @@
       height="100%"
       :description="headerDescription"
     >
-      <h1
+      <div
         class="text-4xl md:text-5xl lg:text-6xl my-2"
         data-usal="fade-u split-word"
       >
-        {{ headerTitle1 }}
+        <h1>{{ headerTitle1 }}</h1>
         <p class="text-orange-300 pt-2 my-2 pb-6">{{ headerHighlightText }}</p>
-        {{ headerTitle2 }}
-      </h1>
+        <h1>{{ headerTitle2 }}</h1>
+      </div>
       <div class="flex gap-4 justify-center my-3">
         <ButtonContactUs />
         <ButtonWhatsapp />

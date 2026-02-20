@@ -15,7 +15,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: "/services",
     icon: "i-heroicons-wrench-screwdriver", // أو i-heroicons-cog-6-tooth
     active: route.path.startsWith("/services"),
-     children: [
+    children: [
       {
         label: "العزل المائي والحراري",
         to: "/services/insulation",
@@ -57,6 +57,8 @@ const items = computed<NavigationMenuItem[]>(() => [
     active: route.path.startsWith("/contactUs"),
   },
 ]);
+const companyName = "العزل الذهبي";
+const subTitle = "للعزل وكشف التسريبات ";
 </script>
 
 <template>
@@ -80,14 +82,14 @@ const items = computed<NavigationMenuItem[]>(() => [
           />
         </div>
         <div class="flex flex-col">
-          <h1 class="text-lg font-bold text-foreground">العزل الذهبي</h1>
-          <span class="text-xs text-muted">للعزل وكشف التسريبات </span>
+          <h1 class="text-lg font-bold text-foreground">{{ companyName }}</h1>
+          <span class="text-xs text-muted"> {{ subTitle }} </span>
         </div>
       </NuxtLink>
     </template>
     <ButtonContactUs />
 
-    <UNavigationMenu :items="items" />
+    <UNavigationMenu :items="items" :key="route.fullPath" />
 
     <template #body>
       <UNavigationMenu
