@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-background">
     <!-- Hero Section -->
     <Header
-      background="/images/hero-projects-min.jpg"
+      background="/images/hero-projects-min.webp"
       backgroundType="image"
       :overlay="true"
       overlayColor="var(--color-secondary)"
@@ -114,7 +114,7 @@ const categories = [
 const projects = [
   {
     id: 1,
-    image: "/images/work-waterproofing.jpg",
+    image: "/images/work-waterproofing.webp",
     title: "عزل سطح مبنى سكني",
     category: "waterproofing",
     categoryLabel: "العزل المائي",
@@ -124,7 +124,7 @@ const projects = [
   },
   {
     id: 2,
-    image: "/images/work-tank.jpg",
+    image: "/images/work-tank.webp",
     title: "عزل خزان مياه أرضي",
     category: "waterproofing",
     categoryLabel: "العزل المائي",
@@ -133,7 +133,7 @@ const projects = [
   },
   {
     id: 3,
-    image: "/images/work-bathroom.jpg",
+    image: "/images/work-bathroom.webp",
     title: "ترميم حمامات فاخرة",
     category: "renovation",
     categoryLabel: "الترميمات",
@@ -141,7 +141,7 @@ const projects = [
   },
   {
     id: 4,
-    image: "/images/work-pest.jpg",
+    image: "/images/work-pest.webp",
     title: "مكافحة حشرات منزلية",
     category: "pest",
     categoryLabel: "مكافحة الحشرات",
@@ -149,7 +149,7 @@ const projects = [
   },
   {
     id: 5,
-    image: "/images/work-cleaning.jpg",
+    image: "/images/work-cleaning.webp",
     title: "تنظيف مجلس عربي",
     category: "cleaning",
     categoryLabel: "التنظيف",
@@ -157,7 +157,7 @@ const projects = [
   },
   {
     id: 6,
-    image: "/images/work-pool.jpg",
+    image: "/images/work-pool.webp",
     title: "عزل وترميم مسبح",
     category: "pools",
     categoryLabel: "المسابح",

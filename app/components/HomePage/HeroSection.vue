@@ -1,7 +1,7 @@
 <template>
   <div class="h-full">
     <Header
-      background="/images/hero-home-min.jpg"
+      background="/images/hero-home-min.webp"
       backgroundType="image"
       :overlay="true"
       overlayColor="var(--color-blue-800)"
