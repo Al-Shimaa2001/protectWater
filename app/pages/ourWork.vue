@@ -66,10 +66,10 @@
         <h2
           class="text-3xl md:text-4xl font-cairo font-black text-primary-foreground mb-4"
         >
-          هل لديك مشروع يحتاج تنفيذ؟
+          {{ question }}
         </h2>
         <p class="text-primary-foreground/80 font-cairo mb-8 max-w-lg mx-auto">
-          تواصل معنا اليوم للحصول على استشارة وعرض سعر مخصص لمشروعك
+          {{ contactUsText }}
         </p>
         <div class="flex gap-4 justify-center">
           <ButtonContactUs />
@@ -86,6 +86,11 @@ definePageMeta({
   description:
     "استعرض مجموعة من مشاريعنا الناجحة في العزل المائي والحراري، الترميمات، مكافحة الحشرات، وتنظيف المجالس والحدائق. شاهد كيف نقدم حلولاً مبتكرة وجودة عالية لعملائنا في جميع أنحاء المملكة العربية السعودية.",
 });
+
+const question = "هل لديك مشروع يحتاج تنفيذ؟";
+const contactUsText =
+  "   تواصل معنا اليوم للحصول على استشارة وعرض سعر مخصص لمشروعك";
+
 // Categories
 const categories = [
   { id: "all", label: "الكل", icon: "i-heroicons-shield-check" },

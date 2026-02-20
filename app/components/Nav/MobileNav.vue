@@ -70,25 +70,22 @@ const subTitle = "للعزل وكشف التسريبات ";
     }"
   >
     <template #title>
-      <NuxtLink to="/" class="flex items-center">
-        <div
-          class="flex bg-blue-500 rounded-lg p-1 items-center justify-center me-2 shadow-blue-200"
-        >
+      <NuxtLink to="/" class="flex items-center me-3">
+        <div class="flex items-center justify-center gap-2 shadow-blue-200">
           <Icon
             name="lucide:droplets"
             width="24"
             height="24"
             style="color: #fffffe"
+            class="bg-primary/60 py-1"
           />
-        </div>
-        <div class="flex flex-col">
-          <h1 class="text-lg font-bold text-foreground">{{ companyName }}</h1>
-          <span class="text-xs text-muted"> {{ subTitle }} </span>
+          <div>
+            <h1 class="text-lg font-bold text-foreground">{{ companyName }}</h1>
+            <p class="text-xs text-muted">{{ subTitle }}</p>
+          </div>
         </div>
       </NuxtLink>
     </template>
-    <ButtonContactUs />
-
     <UNavigationMenu :items="items" :key="route.fullPath" />
 
     <template #body>
