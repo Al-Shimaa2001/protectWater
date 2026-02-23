@@ -135,10 +135,6 @@ export const servicesList = [
       },
       {
         icon: "heroicons:cpu-chip",
-        label: "جهاز الغاز النادر",
-      },
-      {
-        icon: "heroicons:cpu-chip",
         label: "جهاز قياس الرطوبة",
       },
     ],

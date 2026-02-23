@@ -103,13 +103,13 @@ const contactInfo = [
   {
     icon: "lucide:phone",
     title: "اتصل بنا",
-    value: "0500000000",
+    value: "0500000000" + " ||" + "023999929292929",
     description: "متاحون على مدار الساعة",
   },
   {
     icon: "lucide:message-circle",
     title: "واتساب",
-    value: "0500000000",
+    value: "0500000000" + " ||" + "023999929292929",
     description: "رد فوري على استفساراتك",
   },
   {

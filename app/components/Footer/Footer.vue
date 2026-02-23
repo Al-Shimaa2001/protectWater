@@ -36,6 +36,7 @@
               <NuxtLink
                 :to="service.href"
                 class="text-gray-400 hover:text-amber-400 transition-colors text-sm"
+                external
               >
                 {{ service.label }}
               </NuxtLink>

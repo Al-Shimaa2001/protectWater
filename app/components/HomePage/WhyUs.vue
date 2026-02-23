@@ -26,7 +26,7 @@
         </div>
 
         <!-- Features Grid -->
-        <div class="grid sm:grid-cols-2 gap-6" data-usal="fade-u ">
+        <div class="grid sm:grid-cols-2 gap-6">
           <UCard
             v-for="(feature, index) in features"
             :key="index"
