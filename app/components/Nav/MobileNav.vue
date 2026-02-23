@@ -93,6 +93,7 @@ const subTitle = "للعزل وكشف التسريبات ";
         :items="items"
         orientation="vertical"
         class="-mx-2.5 text-sm font-medium transition-colors duration-200"
+        external
       />
     </template>
   </UHeader>

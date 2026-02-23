@@ -59,7 +59,7 @@ const subtitle = "للعزل وكشف التسريبات ";
 <template>
   <UHeader>
     <template #title>
-      <NuxtLink to="/" class="flex items-center">
+      <NuxtLink to="/" class="flex items-center" external>
         <div
           class="flex bg-blue-500 rounded-lg p-1 items-center justify-center me-2 shadow-blue-200"
         >
@@ -77,7 +77,7 @@ const subtitle = "للعزل وكشف التسريبات ";
       </NuxtLink>
     </template>
 
-    <UNavigationMenu :items="items" class="navBar" />
+    <UNavigationMenu :items="items" class="navBar" external />
 
     <template #right>
       <ButtonContactUs />
