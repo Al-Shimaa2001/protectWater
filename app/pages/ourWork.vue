@@ -7,7 +7,7 @@
       :overlay="true"
       overlayColor="var(--color-secondary)"
       :overlayOpacity="0.6"
-      height="100%"
+      height="100vh"
       title="أعمالنا تتحدث عنّا"
       description="نفخر بتقديم خدمات بأعلى معايير الجودة في مجالات العزل والترميم ومكافحة الحشرات والتنظيف في جميع مناطق المملكة"
     />

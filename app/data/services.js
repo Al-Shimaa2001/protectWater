@@ -6,7 +6,7 @@ export const servicesList = [
     title: "خدمات التنظيف المتكاملة",
     description:
       "نقدم أفضل خدمات التنظيف للمنازل والشركات بأحدث المعدات والمواد",
-    heroImage: "/images/hero-cleaning.webp",
+    heroImage: "/images/hero-cleaning-min.webp",
     offerings: [
       {
         icon: "i-heroicons-sparkles",
@@ -50,7 +50,7 @@ export const servicesList = [
     title: "خدمات العزل المتكاملة",
     description:
       "نقدم خدمات عزل متكاملة للخزانات والأسطح والحمامات بأحدث التقنيات",
-    heroImage: "/images/hero-insulation.webp",
+    heroImage: "/images/hero-insulation-min.webp",
 
     offerings: [
       {
@@ -103,7 +103,7 @@ export const servicesList = [
     slug: "leak-detection",
     title: "كشف التسريبات",
     description: "كشف تسريبات المياه بأحدث الأجهزة الإلكترونية بدون تكسير",
-    heroImage: "/images/hero-leak-detection.webp",
+    heroImage: "/images/hero-leak-detection-min.webp",
 
     offerings: [
       {
@@ -144,7 +144,7 @@ export const servicesList = [
     slug: "pest-control",
     title: "مكافحة الحشرات",
     description: "مكافحة جميع أنواع الحشرات بأمان وفعالية",
-    heroImage: "/images/hero-pest-control.webp",
+    heroImage: "/images/hero-pest-control-min.webp",
 
     offerings: [
       {

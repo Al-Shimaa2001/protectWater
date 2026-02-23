@@ -6,7 +6,7 @@
       :overlay="true"
       overlayColor="var(--color-blue-800)"
       :overlayOpacity="0.5"
-      height="100%"
+      height="100vh"
       description="تواصل معنا للاستفسار والخدمات - نحن هنا لمساعدتك في أي وقت"
     >
       <div class="flex gap-4 justify-center my-7" data-usal="fade-d">
