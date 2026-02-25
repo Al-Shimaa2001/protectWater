@@ -9,32 +9,38 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: "/",
     icon: "i-heroicons-home",
     active: route.path === "/",
+    external: true,
   },
   {
     label: "خدماتنا",
     to: "/services",
     icon: "i-heroicons-wrench-screwdriver", // أو i-heroicons-cog-6-tooth
     active: route.path.startsWith("/services"),
+    external: true,
     children: [
       {
         label: "العزل المائي والحراري",
         to: "/services/insulation",
         active: route.path.startsWith("/services/insulation"),
+        external: true,
       },
       {
         label: "كشف التسربات",
         to: "/services/leak-detection",
         active: route.path.startsWith("/services/leak-detection"),
+        external: true,
       },
       {
         label: "خدمات التنظيف",
         to: "/services/cleaning",
         active: route.path.startsWith("/services/cleaning"),
+        external: true,
       },
       {
         label: "مكافحة الحشرات",
         to: "/services/pest-control",
         active: route.path.startsWith("/services/pest-control"),
+        external: true,
       },
     ],
   },
@@ -43,18 +49,21 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: "/WhoUs",
     icon: "i-heroicons-building-office-2", // أو i-heroicons-information-circle
     active: route.path.startsWith("/WhoUs"),
+    external: true,
   },
   {
     label: "اعمالنا",
     to: "/ourWork",
     icon: "i-heroicons-briefcase", // أو i-heroicons-folder-open
     active: route.path.startsWith("/ourWork"),
+    external: true,
   },
   {
     label: "تواصل معانا",
     to: "/contactUs",
     icon: "i-heroicons-phone", // أو i-heroicons-envelope
     active: route.path.startsWith("/contactUs"),
+    external: true,
   },
 ]);
 const companyName = "العزل الذهبي";
