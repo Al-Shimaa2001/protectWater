@@ -10,10 +10,10 @@
       v-usal="'fade-u duration-500'"
     >
       <div
-        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 my-5 mx-3"
+        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 my-5 mx-3 -translate-y-50"
       >
         <span class="m-2 p-2 bg-green-500 rounded-full"></span>
-        <p class="text-lg" data-usal="fade-u split-word">
+        <p class="text-lg" data-usal="fade-u">
           {{ experienceText }}
         </p>
       </div>

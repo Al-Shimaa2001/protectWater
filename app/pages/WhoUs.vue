@@ -7,6 +7,7 @@
       overlayColor="var(--color-blue-800)"
       overlayOpacity="0.5"
       height="100vh"
+      title="من نحن"
       description="شركة العزل الذهبي متخصصة في العزل المائي والحراري وكشف التسربات بجودة عالية وضمان مميز في المملكة العربية السعودية"
     />
     <main class="pt-20">

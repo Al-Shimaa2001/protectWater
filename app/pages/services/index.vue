@@ -8,6 +8,7 @@
         overlayColor="var(--color-blue-800)"
         :overlayOpacity="0.5"
         height="100vh"
+        title="خدماتنا"
         :description="pageContent.header.description"
       >
         <div class="flex gap-4 justify-center my-3">
