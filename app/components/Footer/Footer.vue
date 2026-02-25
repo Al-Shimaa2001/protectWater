@@ -167,8 +167,8 @@ const contactInfo = [
 ];
 
 const bottomLinks = [
-  { label: "سياسة الخصوصية", href: "#" },
-  { label: "الشروط والأحكام", href: "#" },
+  { label: "سياسة الخصوصية", href: "/privacy-policy" },
+  { label: "الشروط والأحكام", href: "/terms-conditions" },
 ];
 </script>
 
