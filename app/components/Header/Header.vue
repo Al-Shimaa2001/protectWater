@@ -20,7 +20,7 @@
       <slot name="header">
         <h1
           v-if="title"
-          class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+          class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 -translate-y-20"
         >
           {{ title }}
         </h1>
