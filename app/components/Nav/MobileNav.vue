@@ -31,6 +31,18 @@ const items = computed<NavigationMenuItem[]>(() => [
         external: true,
       },
       {
+        label: " الترميمات وإعادة التأهيل",
+        to: "/services/restoration",
+        active: route.path.startsWith("/services/restoration"),
+        external: true,
+      },
+      {
+        label: "تمديدات الغاز المركزية",
+        to: "/services/gas-extensions",
+        active: route.path.startsWith("/services/gas-extensions"),
+        external: true,
+      },
+      {
         label: "خدمات التنظيف",
         to: "/services/cleaning",
         active: route.path.startsWith("/services/cleaning"),

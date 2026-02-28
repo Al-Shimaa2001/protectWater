@@ -10,7 +10,7 @@
       v-usal="'fade-u duration-500'"
     >
       <div
-        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 my-5 mx-3 -translate-y-50"
+        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 my-5 mx-3 -translate-y-17"
       >
         <span class="m-2 p-2 bg-green-500 rounded-full"></span>
         <p class="text-lg" data-usal="fade-u">
@@ -28,7 +28,7 @@
 
       <p
         v-if="description"
-        class="text-lg md:text-xl mb-6 max-w-2xl"
+        class="text-lg md:text-xl mb-6 w-90 max-w-2xl"
         data-usal="fade-u"
       >
         {{ description }}

@@ -129,8 +129,10 @@ const copyrightText = "©";
 const rightsReservedText = "جميع الحقوق محفوظة";
 
 const services = [
-  { label: "العزل المائي والحراري", href: "/services/insulation" },
   { label: "كشف التسربات", href: "/services/leak-detection" },
+  { label: "العزل المائي والحراري", href: "/services/insulation" },
+  { label: "الترميمات وإعادة التأهيل", href: "/services/restoration" },
+  { label: "تمديدات الغاز المركزية", href: "/services/gas-extensions" },
   { label: "خدمات التنظيف", href: "/services/cleaning" },
   { label: "مكافحة الحشرات", href: "/services/pest-control" },
 ];

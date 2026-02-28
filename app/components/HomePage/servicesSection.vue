@@ -5,7 +5,7 @@
       subTitle="خدمات متكاملة للعزل والتنظيف والحماية"
       description="نقدم مجموعة شاملة من خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات بأعلى معايير الجودة"
     />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
       <Card
         v-for="service in services"
         :key="service.id"
@@ -45,6 +45,22 @@ const services = [
     title: "العزل المائي والحراري",
     details:
       "عزل الخزانات والأسطح والحمامات بأحدث التقنيات والمواد العازلة عالية الجودة",
+    footer: "اعرف المزيد",
+  },
+  {
+    id: "restoration",
+    nameIcon: "lucide:hammer",
+    title: "الترميمات وإعادة التأهيل",
+    details:
+      "ترميم المباني القديمة وإصلاح التشققات ومعالجة مشاكل الرطوبة وتجديد الواجهات",
+    footer: "اعرف المزيد",
+  },
+  {
+    id: "gas-extensions",
+    nameIcon: "lucide:flame",
+    title: "تمديدات الغاز المركزية",
+    details:
+      "تصميم وتنفيذ شبكات الغاز المركزية للمباني السكنية والتجارية بأعلى معايير الأمان والجودة",
     footer: "اعرف المزيد",
   },
   {
