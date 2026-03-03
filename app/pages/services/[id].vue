@@ -47,17 +47,19 @@
     </main>
 
     <!-- قسم طلب الخدمة (ثابت في كل الخدمات) -->
-    <section class="bg-secondary text-white my-5 rounded-2xl p-3">
+    <section class="bg-secondary/70 text-white my-5 rounded-2xl p-3">
       <div class="flex justify-center items-center flex-col gap-5">
         <h1 class="text-xl font-bold">{{ serviceRequest }}</h1>
-        <p class="text-sm">{{ price }}</p>
+        <p class="text-sm font-bold border-b-2 border-b-amber-100 mb-2 pb-1">
+          {{ price }}
+        </p>
       </div>
       <div
         v-for="(offer, index) in offers"
         :key="index"
         class="text-sm flex justify-start items-start gap-2 my-2"
       >
-        <UIcon :name="offer.icon" class="w-5 h-5 text-green-500 shrink-0" />
+        <UIcon :name="offer.icon" class="w-5 h-5 text-blue-700 shrink-0" />
         {{ offer.details }}
       </div>
       <div class="flex justify-center items-center mt-5">
@@ -75,16 +77,12 @@ const price = "احصل على استشارة وعرض سعر مخصص";
 const offers = [
   {
     icon: "heroicons:sparkles",
-    details: "خدمة مخصصة للمساجد خصم خاص للمساجد الكبيرة في جميع الخدمات",
-  },
-  {
-    icon: "heroicons:sparkles",
-    details: "خدمة مخصصة للجمعيات الخيرية خصم خاص  في جميع الخدمات",
+    details: " المساجد الكبيرة و للجمعيات الخيرية خصم خاص  في جميع الخدمات",
   },
   {
     icon: "heroicons:sparkles",
     details:
-      "خدمة مخصصة للمساحات الكبيرة و للجمعيات الخيرية خصم خاص  في جميع انواع العزل",
+      "  للمساحات الكبيرة و للجمعيات الخيرية خصم خاص  في جميع انواع العزل",
   },
 ];
 

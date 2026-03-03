@@ -67,10 +67,11 @@ const items = computed<NavigationMenuItem[]>(() => [
     ],
   },
   {
-    label: "الرئيسية    ",
+    label: "الرئيسية ",
     to: "/",
-    active: route.path.startsWith("/"),
+
     external: true,
+    active: route.path.match(/^\/$/) !== null,
   },
 ]);
 const companyName = "العزل الذهبي";
