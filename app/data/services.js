@@ -3,9 +3,9 @@ export const servicesList = [
   {
     id: "cleaning",
     slug: "cleaning",
-    title: "خدمات التنظيف المتكاملة",
+    title: "خدمات التنظيف والعناية المتكاملة",
     description:
-      "نقدم أفضل خدمات التنظيف للمنازل والشركات بأحدث المعدات والمواد",
+      "نقدم أفضل خدمات التنظيف ومكافحة الحشرات والعناية بالحدائق للمنازل والشركات بأحدث المعدات والمواد",
     heroImage: "/images/hero-cleaning-min.webp",
     offerings: [
       {
@@ -24,6 +24,23 @@ export const servicesList = [
         icon: "i-heroicons-sparkles",
         details: "تعقيم وتطهير الأسطح",
       },
+      // خدمات جديدة
+      {
+        icon: "i-heroicons-x-circle",
+        details: "طارد الحمام بجميع أنواعه (شوك معدني - شبك - جهاز صوتي)",
+      },
+      {
+        icon: "i-heroicons-adjustments-horizontal",
+        details: "تركيب شبك الحمام للنوافذ والشرفات",
+      },
+      {
+        icon: "i-heroicons-sun",
+        details: "تنسيق الحدائق وتقليم الأشجار",
+      },
+      {
+        icon: "i-heroicons-water-drop",
+        details: "تصميم وصيانة الشلالات والنوافير",
+      },
     ],
     materials: [
       {
@@ -41,6 +58,27 @@ export const servicesList = [
       {
         icon: "heroicons:beaker",
         label: "مواد معقمة ألمانية",
+      },
+      // مواد جديدة
+      {
+        icon: "heroicons:shield-check",
+        label: "شوك مانع لجلوس الحمام (ستانلس ستيل)",
+      },
+      {
+        icon: "heroicons:adjustments-horizontal",
+        label: "شبك حماية من الحمام (بلاستيك - معدن)",
+      },
+      {
+        icon: "heroicons:sparkles",
+        label: "أدوات العناية بالحدائق (مقصات - مناشير)",
+      },
+      {
+        icon: "heroicons:beaker",
+        label: "مضخات مياه للشلالات والنوافير",
+      },
+      {
+        icon: "heroicons:light-bulb",
+        label: "إضاءات LED تحت الماء للشلالات",
       },
     ],
   },
