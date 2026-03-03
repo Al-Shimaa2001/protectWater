@@ -54,7 +54,7 @@
           {{ price }}
         </p>
       </div>
-      <div class="text-red-600 font-bold text-2xl w-100 py-2 my-3">
+      <div class="text-red-600/60 font-bold text-2xl w-100 py-2 my-3">
         عروض خاصة %
       </div>
       <div
@@ -81,13 +81,8 @@ const price = "احصل على استشارة وعرض سعر مخصص";
 const offers = [
   {
     icon: "heroicons:sparkles",
-    title: "خصم خاص ",
-    details: "     المساجد الكبيرة و للجمعيات الخيرية  في جميع الخدمات",
-  },
-  {
-    icon: "heroicons:sparkles",
-    title: "خصم خاص ",
-    details: "     للمساحات الكبيرة و للجمعيات الخيرية في جميع انواع العزل",
+    details:
+      "     المساجد والمساحات الكبيرة و للجمعيات الخيرية  في جميع الخدمات",
   },
 ];
 
