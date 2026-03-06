@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- الهيدر الديناميكي -->
     <HeaderServicesHero
       :background="service.heroImage"
       backgroundType="image"
@@ -15,76 +14,15 @@
 
   <UContainer class="px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-5">
     <main class="col-span-2">
-      <!-- قسم "ما نقدمه" -->
-      <section class="mb-4">
-        <CardServiceCard title="ما نقدمه في هذه الخدمة" />
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-content-center items-center"
-        >
-          <CardServiceDetails
-            v-for="(item, index) in service.offerings"
-            :key="index"
-            :icon="item.icon"
-            :description="item.details"
-          />
-        </div>
-      </section>
-
-      <!-- قسم "المواد والتقنيات" -->
-      <section>
-        <CardServiceCard title="المواد والتقنيات المستخدمة" />
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-content-center items-center"
-        >
-          <CardServiceDetails
-            v-for="(item, index) in service.materials"
-            :key="index"
-            :icon="item.icon"
-            :description="item.label"
-          />
-        </div>
-      </section>
+      <ServicesOurServices />
+      <ServicesMatrials />
     </main>
-
-    <!-- قسم طلب الخدمة (ثابت في كل الخدمات) -->
-    <section class="bg-secondary/70 text-white my-5 rounded-2xl p-3">
-      <div class="flex justify-center items-center flex-col gap-5">
-        <h1 class="text-xl font-bold">{{ serviceRequest }}</h1>
-        <p class="text-sm font-bold border-b-2 border-b-amber-100 mb-2 pb-1">
-          {{ price }}
-        </p>
-      </div>
-      <div class="text-red-600/60 font-bold text-2xl w-100 py-2 my-3">
-        عروض خاصة %
-      </div>
-      <div
-        v-for="(offer, index) in offers"
-        :key="index"
-        class="text-sm flex justify-start items-start gap-2 my-2"
-      >
-        <UIcon :name="offer.icon" class="w-5 h-5 text-blue-700 shrink-0" />
-
-        <p>{{ offer.details }}</p>
-      </div>
-      <div class="flex justify-center items-center mt-5">
-        <ButtonContactUs />
-      </div>
-    </section>
+    <ServicesServiceOrder />
   </UContainer>
 </template>
 
 <script setup>
 import { servicesList } from "~/data/services";
-
-const serviceRequest = "اطلب الخدمة الان";
-const price = "احصل على استشارة وعرض سعر مخصص";
-const offers = [
-  {
-    icon: "heroicons:sparkles",
-    details:
-      "     المساجد والمساحات الكبيرة و للجمعيات الخيرية  في جميع الخدمات",
-  },
-];
 
 const route = useRoute();
 const serviceId = route.params.id;
