@@ -8,7 +8,17 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
- modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxt/icon",'@usal/vue/nuxt'],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxt/icon",
+    "@usal/vue/nuxt",
+    "@nuxtjs/sitemap",
+  ],
+  sitemap: {
+    hostname: "https://protect-water.vercel.app",
+  },
   ui: {
     colorMode: false,
   },
