@@ -97,6 +97,7 @@
             v-for="(link, index) in bottomLinks"
             :key="index"
             :to="link.href"
+            external
             class="text-sm text-gray-400 hover:text-amber-400 transition-colors"
           >
             {{ link.label }}
