@@ -21,15 +21,6 @@
 </template>
 
 <script setup>
-useHead({
-  title: "خدماتنا المتكاملة",
-  meta: [
-    {
-      name: "description",
-      content: "نقدم خدمات العزل وكشف التسربات والتنظيف ومكافحة الحشرات",
-    },
-  ],
-});
 const services = [
   {
     id: "leak-detection",
