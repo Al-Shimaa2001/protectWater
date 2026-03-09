@@ -7,6 +7,7 @@ export const servicesList = [
     description:
       "نقدم أفضل خدمات التنظيف ومكافحة الحشرات والعناية بالحدائق للمنازل والشركات بأحدث المعدات والمواد",
     heroImage: "/images/hero-cleaning-min.webp",
+    videoUrl: "/video/cleaning.mp4", // فيديو يوتيوب للتنظيف
     offerings: [
       {
         icon: "i-heroicons-sparkles",
@@ -88,6 +89,7 @@ export const servicesList = [
     title: "كشف التسريبات",
     description: "كشف تسريبات المياه بأحدث الأجهزة الإلكترونية بدون تكسير",
     heroImage: "/images/hero-leak-detection-min.webp",
+    videoUrl: "/video/leak-detection.mp4", // فيديو لكشف التسريبات
 
     offerings: [
       {
@@ -130,6 +132,7 @@ export const servicesList = [
     description:
       "نقدم خدمات عزل متكاملة للخزانات والأسطح والحمامات بأحدث التقنيات",
     heroImage: "/images/hero-insulation-min.webp",
+    videoUrl: "/video/insulation.mp4", // فيديو للعزل
 
     offerings: [
       {
@@ -184,6 +187,7 @@ export const servicesList = [
     description:
       "نقدم خدمات متكاملة لترميم المباني القديمة وإصلاح التشققات ومعالجة مشاكل الرطوبة وتجديد الواجهات",
     heroImage: "/images/hero-restoration-min.webp",
+    videoUrl: "/video/restoration.mp4", // فيديو للترميم
 
     offerings: [
       {
@@ -242,6 +246,7 @@ export const servicesList = [
     description:
       "تصميم وتنفيذ شبكات الغاز المركزية للمباني السكنية والتجارية بأعلى معايير الأمان والجودة",
     heroImage: "/images/hero-gas-min.webp",
+    videoUrl: "/video/gas-extensions.mp4", // فيديو لتمديدات الغاز
 
     offerings: [
       {
@@ -303,6 +308,7 @@ export const servicesList = [
     title: "مكافحة الحشرات",
     description: "مكافحة جميع أنواع الحشرات بأمان وفعالية",
     heroImage: "/images/hero-pest-control-min.webp",
+    videoUrl: "/video/pest-control.mp4", // فيديو لمكافحة الحشرات
 
     offerings: [
       {

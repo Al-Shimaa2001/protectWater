@@ -15,6 +15,7 @@
   <UContainer class="px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-5">
     <main class="col-span-2">
       <ServicesOurServices />
+      <ServicesVideo />
       <ServicesMatrials />
     </main>
     <ServicesServiceOrder />
