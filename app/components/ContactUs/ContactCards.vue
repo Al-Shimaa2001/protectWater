@@ -28,20 +28,14 @@ const contactInfo = [
   {
     icon: "lucide:phone",
     title: "اتصل بنا",
-    value: "0500000000" + " |  " + "02399929",
+    value: "9660547202483" + " |  " + "",
     description: "متاحون على مدار الساعة",
   },
   {
     icon: "lucide:message-circle",
     title: "واتساب",
-    value: "0500000000" + " |  " + "023999",
+    value: "9660547202483" + " |  " + " ",
     description: "رد فوري على استفساراتك",
-  },
-  {
-    icon: "lucide:mail",
-    title: "البريد الإلكتروني",
-    value: "info@golden-insulation.com",
-    description: "راسلنا في أي وقت",
   },
   {
     icon: "lucide:map-pin",

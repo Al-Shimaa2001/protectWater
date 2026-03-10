@@ -150,7 +150,7 @@ const contactInfo = [
   {
     icon: "i-heroicons-phone",
     label: "اتصل بنا",
-    value: "0500000000",
+    value: "0547202483",
   },
   {
     icon: "i-heroicons-envelope",

@@ -35,6 +35,10 @@ export const servicesList = [
         details: "تركيب شبك الحمام للنوافذ والشرفات",
       },
       {
+        icon: "i-heroicons-wrench-screwdriver",
+        details: "تسليك المجاري والبالوعات بأحدث المعدات",
+      },
+      {
         icon: "i-heroicons-sun",
         details: "تنسيق الحدائق وتقليم الأشجار",
       },
@@ -68,6 +72,10 @@ export const servicesList = [
       {
         icon: "heroicons:adjustments-horizontal",
         label: "شبك حماية من الحمام (بلاستيك - معدن)",
+      },
+      {
+        icon: "heroicons:wrench-screwdriver",
+        label: "معدات تسليك المجاري (سوسته - ضغط ماء)",
       },
       {
         icon: "heroicons:sparkles",
@@ -327,6 +335,11 @@ export const servicesList = [
         icon: "i-heroicons-bug-ant",
         details: "مكافحة القوارض",
       },
+      // إضافة شبك طارد الحمام
+      {
+        icon: "i-heroicons-x-circle",
+        details: "شبك طارد للحمام - يمنع دخول واستقرار الحمام",
+      },
     ],
 
     materials: [
@@ -345,6 +358,32 @@ export const servicesList = [
       {
         icon: "heroicons:beaker",
         label: "مواد طبيعية عضوية",
+      },
+      {
+        icon: "heroicons:shield-check",
+        label: "شبك طارد الحمام (ستانلس ستيل)",
+      },
+      {
+        icon: "heroicons:adjustments-horizontal",
+        label: "شبك طارد الحمام (بلاستيك مقاوم) ",
+      },
+      {
+        icon: "heroicons:adjustments-horizontal",
+        label: "شوك مانع لجلوس الحمام",
+      },
+    ],
+    images: [
+      {
+        src: "/images/pigeon-net-stainless.jpg",
+        alt: "شبك طارد الحمام من الستانلس ستيل",
+      },
+      {
+        src: "/images/pigeon-net-plastic.webp",
+        alt: "شبك طارد الحمام من البلاستيك",
+      },
+      {
+        src: "/images/pigeon-spikes.jpg",
+        alt: "شوك مانع لجلوس الحمام",
       },
     ],
   },
