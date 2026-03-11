@@ -374,16 +374,8 @@ export const servicesList = [
     ],
     images: [
       {
-        src: "/images/pigeon-net-stainless.webp",
-        alt: "شبك طارد الحمام من الستانلس ستيل",
-      },
-      {
         src: "/images/pigeon-nets-plastic.webp",
         alt: "شبك طارد الحمام من البلاستيك",
-      },
-      {
-        src: "/images/pigeon-spikes.webp",
-        alt: "شوك مانع لجلوس الحمام",
       },
     ],
   },

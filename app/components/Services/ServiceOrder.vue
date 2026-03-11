@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <section class="bg-secondary/70 text-white my-5 rounded-2xl p-3">
+  <div class="flex flex-col justify-center items-center gap-4">
+    <section
+      class="bg-secondary/70 order-last md:order-first text-white my-5 rounded-2xl p-3"
+    >
       <div class="flex justify-center items-center flex-col gap-5">
         <h1 class="text-xl font-bold">{{ serviceRequest }}</h1>
         <p class="text-sm font-bold border-b-2 border-b-amber-100 mb-2 pb-1">
@@ -24,7 +26,7 @@
       </div>
     </section>
     <section>
-      <ServicesImage />
+      <ServicesImage class="order-first md:order-last" />
     </section>
   </div>
 </template>

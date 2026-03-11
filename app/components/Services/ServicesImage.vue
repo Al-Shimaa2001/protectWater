@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col items-center justify-center gap-3 h-full">
+  <div class="flex items-center justify-center h-100vh md:h-100">
     <section v-for="(item, index) in service.images" :key="index">
       <NuxtImg
         v-if="item"
         :src="item.src"
         :alt="item.alt || 'صورة المادة'"
-        class="rounded-lg shadow-md mb-6 sizes-60 object-cover"
+        class="rounded-lg shadow-md mb-6 w-40 h-50 md:sizes-60 object-cover"
       />
     </section>
   </div>
