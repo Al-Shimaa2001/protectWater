@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "العزل الذهبي",
+      title: "إعمار البلاد",
       htmlAttrs: {
         lang: "ar",
       },

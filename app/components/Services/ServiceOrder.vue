@@ -23,6 +23,9 @@
         <ButtonContactUs />
       </div>
     </section>
+    <section>
+      <ServicesImage />
+    </section>
   </div>
 </template>
 

@@ -1,9 +1,9 @@
 <template>
-  <UContainer class="h-110 m-5 p-3 ">
+  <UContainer class="h-110 my-5 p-3">
     <video
-      ref="videoPlayer" 
+      ref="videoPlayer"
       controls
-      class="m-2 border border-gray-400 rounded-2xl w-100 h-107"
+      class="m-2 border border-gray-400 rounded-2xl w-107 h-107"
     >
       <source :src="service.videoUrl" type="video/mp4" />
     </video>

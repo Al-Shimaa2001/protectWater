@@ -78,7 +78,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     external: true,
   },
 ]);
-const companyName = "العزل الذهبي";
+const companyName = "إعمار البلاد";
 const subTitle = "للعزل وكشف التسريبات ";
 </script>
 

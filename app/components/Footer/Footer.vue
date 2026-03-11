@@ -117,7 +117,7 @@ onMounted(() => {
   mounted.value = true;
 });
 
-const companyName = "العزل الذهبي";
+const companyName = "إعمار البلاد";
 const companyTagline = "للعزل وكشف التسريبات";
 const companyDescription =
   "شركة متخصصة في العزل والتنظيف ومكافحة الحشرات بأحدث التقنيات وضمان يصل إلى 10 سنوات";

@@ -74,7 +74,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     active: route.path.match(/^\/$/) !== null,
   },
 ]);
-const companyName = "العزل الذهبي";
+const companyName = "إعمار البلاد";
 const subtitle = "للعزل وكشف التسريبات ";
 </script>
 
