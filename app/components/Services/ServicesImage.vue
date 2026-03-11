@@ -5,7 +5,7 @@
         v-if="item"
         :src="item.src"
         :alt="item.alt || 'صورة المادة'"
-        class="rounded-lg shadow-md mb-6 w-40 h-50 md:sizes-60 object-cover"
+        class="rounded-lg shadow-md mb-6 w-90 h-100 md:sizes-60"
       />
     </section>
   </div>
