@@ -64,7 +64,7 @@ const startAutoCloseTimer = () => {
 
   timeoutId = setTimeout(() => {
     showNumbers.value = false;
-  }, 6000);
+  }, 3000);
 };
 
 const clearAutoCloseTimer = () => {
