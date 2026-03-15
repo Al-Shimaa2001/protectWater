@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="text-red-600/60 font-bold text-2xl w-70 py-2 my-3">
-        عروض خاصة %
+        {{ specialOffer }}
       </div>
       <div
         v-for="(offer, index) in offers"
@@ -34,6 +34,7 @@
 <script setup>
 const serviceRequest = "اطلب الخدمة الان";
 const price = "احصل على استشارة وعرض سعر مخصص";
+const specialOffer = "عرض خاص %";
 const offers = [
   {
     icon: "heroicons:sparkles",

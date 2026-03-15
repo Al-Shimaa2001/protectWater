@@ -20,9 +20,7 @@
       <div class="py-2">
         <h3
           class="text-sm font-semibold text-gray-700 px-4 py-2 bg-gray-50 border-b"
-        >
-          اختر رقم التواصل
-        </h3>
+        > {{ choosePhone }}</h3>
         <button
           v-for="number in phoneNumbers"
           :key="number.value"
@@ -39,9 +37,10 @@
 
 <script setup>
 const contactText = " تواصل عبر الواتساب";
+const choosePhone = "اختر رقم الاتصال";
+
 const showNumbers = ref(false);
 
-// قائمة أرقام الواتساب
 const phoneNumbers = [
   { label: "📱 966الرقم الأول: 0547202483", value: "9660547202483" },
   { label: "📱 966الرقم الثاني: 0554112043", value: "9660554112043" },

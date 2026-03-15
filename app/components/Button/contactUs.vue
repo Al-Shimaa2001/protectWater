@@ -1,6 +1,6 @@
 <template>
   <div class="relative flex gap-4">
-    <!-- زر الاتصال الهاتفي المباشر -->
+   
     <UTooltip text="اتصال هاتفي مباشر" :kbds="['meta', 'C']">
       <UButton
         class="rounded-md text-white px-8 py-3 font-bold bg-primary hover:bg-gray-300/30 hover:cursor-pointer transition-all"
@@ -11,7 +11,7 @@
       </UButton>
     </UTooltip>
 
-    <!-- قائمة الأرقام المنبثقة -->
+
     <div
       v-if="showNumbers"
       class="absolute top-full left-0 right-5 mt-2 w-64 bg-white text-black rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50"
@@ -20,7 +20,7 @@
         <h3
           class="text-sm font-semibold text-gray-700 px-4 py-2 bg-gray-50 border-b"
         >
-          اختر رقم الاتصال
+         {{choosePhone}}
         </h3>
         <button
           v-for="number in phoneNumbers"
@@ -38,6 +38,7 @@
 
 <script setup>
 const callUs = "اتصل الآن";
+const choosePhone = "اختر رقم الاتصال";
 const showNumbers = ref(false);
 
 const phoneNumbers = [
