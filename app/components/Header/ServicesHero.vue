@@ -33,7 +33,7 @@
         class="inline-flex bg-primary items-center gap-2 text-sm p-3 rounded-xl mb-6 transition-colors"
       >
         <Icon name="i-heroicons-arrow-right" class="w-4 h-4" />
-        العودة للخدمات
+      {{back}}
       </NuxtLink>
     </div>
   </div>
@@ -41,6 +41,7 @@
 
 <script setup lang="ts">
 const experience = "خبرة اكثر من 15 عام في المجال";
+const back ='  العودة للخدمات'
 interface Props {
   title?: string;
   description?: string;
