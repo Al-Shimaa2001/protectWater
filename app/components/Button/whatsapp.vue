@@ -45,8 +45,8 @@ const showNumbers = ref(false);
 let timeoutId = null;
 
 const phoneNumbers = [
-  { label: "📱 966الرقم الأول: 0547202483", value: "9660547202483" },
-  { label: "📱 966الرقم الثاني: 0554112043", value: "9660554112043" },
+  { label: "  9660547202483 ", value: "9660547202483" },
+  { label: " 9660554112043", value: "9660554112043" },
 ];
 
 const toggleNumbers = () => {
