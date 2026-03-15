@@ -155,7 +155,7 @@ const contactInfo = [
   {
     icon: "i-heroicons-envelope",
     label: "البريد الإلكتروني",
-    value: "info@golden-insulation.com",
+    value: "a3maralbilad@gmail.com",
   },
   {
     icon: "i-heroicons-map-pin",

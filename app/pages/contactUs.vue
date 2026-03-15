@@ -40,7 +40,7 @@
 
 <script setup>
 definePageMeta({
-  title: "تواصل معنا - Golden Insulation",
+  title: "تواصل معنا ",
   meta: [
     {
       name: "description",
@@ -50,7 +50,7 @@ definePageMeta({
   ],
 });
 useHead({
-  title: "تواصل معنا -  الشركة الذهبية للعزل",
+  title: "تواصل معنا ",
   meta: [
     {
       name: "description",
