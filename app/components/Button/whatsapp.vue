@@ -2,7 +2,7 @@
   <div class="relative">
     <UTooltip text="Open on whatsapp" :kbds="['meta', 'G']">
       <UButton
-        @click="showNumbers = !showNumbers"
+        @click="toggleNumbers"
         class="rounded-md text-black px-8 py-3 font-bold bg-gray-300/50 hover:bg-primary hover:text-white hover:cursor-pointer hover:outline"
         variant="solid"
         icon="i-heroicons-chat-bubble-left-right"
@@ -20,7 +20,9 @@
       <div class="py-2">
         <h3
           class="text-sm font-semibold text-gray-700 px-4 py-2 bg-gray-50 border-b"
-        > {{ choosePhone }}</h3>
+        >
+          {{ choosePhone }}
+        </h3>
         <button
           v-for="number in phoneNumbers"
           :key="number.value"
@@ -40,11 +42,37 @@ const contactText = " تواصل عبر الواتساب";
 const choosePhone = "اختر رقم الاتصال";
 
 const showNumbers = ref(false);
+let timeoutId = null;
 
 const phoneNumbers = [
   { label: "📱 966الرقم الأول: 0547202483", value: "9660547202483" },
   { label: "📱 966الرقم الثاني: 0554112043", value: "9660554112043" },
 ];
+
+const toggleNumbers = () => {
+  showNumbers.value = !showNumbers.value;
+
+  if (showNumbers.value) {
+    startAutoCloseTimer();
+  } else {
+    clearAutoCloseTimer();
+  }
+};
+
+const startAutoCloseTimer = () => {
+  clearAutoCloseTimer();
+
+  timeoutId = setTimeout(() => {
+    showNumbers.value = false;
+  }, 6000);
+};
+
+const clearAutoCloseTimer = () => {
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+    timeoutId = null;
+  }
+};
 
 const openWhatsApp = (phone) => {
   const message = encodeURIComponent("مرحباً، أود الاستفسار عن خدماتكم");
@@ -53,12 +81,22 @@ const openWhatsApp = (phone) => {
     external: true,
     open: { target: "_blank" },
   });
-  showNumbers.value = false; // إخفاء القائمة بعد الاختيار
+  showNumbers.value = false;
+  clearAutoCloseTimer();
 };
 
-// إغلاق القائمة عند النقر خارجها
 onMounted(() => {
   document.addEventListener("click", (e) => {
+    if (!e.target.closest(".relative")) {
+      showNumbers.value = false;
+      clearAutoCloseTimer();
+    }
+  });
+});
+
+onUnmounted(() => {
+  clearAutoCloseTimer();
+  document.removeEventListener("click", (e) => {
     if (!e.target.closest(".relative")) {
       showNumbers.value = false;
     }
@@ -66,6 +104,4 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
-/* يمكنك إضافة تنسيقات إضافية هنا */
-</style>
+<style scoped></style>

@@ -1,16 +1,14 @@
 <template>
   <div class="relative flex gap-4">
-   
     <UTooltip text="اتصال هاتفي مباشر" :kbds="['meta', 'C']">
       <UButton
         class="rounded-md text-white px-8 py-3 font-bold bg-primary hover:bg-gray-300/30 hover:cursor-pointer transition-all"
         icon="i-heroicons-phone-arrow-up-right"
-        @click="showNumbers = !showNumbers"
+        @click="toggleNumbers"
       >
         {{ callUs }}
       </UButton>
     </UTooltip>
-
 
     <div
       v-if="showNumbers"
@@ -20,7 +18,7 @@
         <h3
           class="text-sm font-semibold text-gray-700 px-4 py-2 bg-gray-50 border-b"
         >
-         {{choosePhone}}
+          {{ choosePhone }}
         </h3>
         <button
           v-for="number in phoneNumbers"
@@ -40,20 +38,56 @@
 const callUs = "اتصل الآن";
 const choosePhone = "اختر رقم الاتصال";
 const showNumbers = ref(false);
+let timeoutId = null;
 
 const phoneNumbers = [
   { label: " 966الرقم الأول: 0547202483", value: "9660547202483" },
   { label: " 966554112043 :الرقم الثاني", value: "966554112043" },
 ];
 
-const makeCall = (phone) => {
-  window.location.href = `tel:${phone}`;
-  showNumbers.value = false; // إخفاء القائمة بعد الاختيار
+const toggleNumbers = () => {
+  showNumbers.value = !showNumbers.value;
+
+  if (showNumbers.value) {
+    startAutoCloseTimer();
+  } else {
+    clearAutoCloseTimer();
+  }
 };
 
-// إغلاق القائمة عند النقر خارجها
+const startAutoCloseTimer = () => {
+  clearAutoCloseTimer();
+
+  timeoutId = setTimeout(() => {
+    showNumbers.value = false;
+  }, 5000);
+};
+
+const clearAutoCloseTimer = () => {
+  if (timeoutId) {
+    clearTimeout(timeoutId);
+    timeoutId = null;
+  }
+};
+
+const makeCall = (phone) => {
+  window.location.href = `tel:${phone}`;
+  showNumbers.value = false;
+  clearAutoCloseTimer();
+};
+
 onMounted(() => {
   document.addEventListener("click", (e) => {
+    if (!e.target.closest(".relative")) {
+      showNumbers.value = false;
+      clearAutoCloseTimer();
+    }
+  });
+});
+
+onUnmounted(() => {
+  clearAutoCloseTimer();
+  document.removeEventListener("click", (e) => {
     if (!e.target.closest(".relative")) {
       showNumbers.value = false;
     }
