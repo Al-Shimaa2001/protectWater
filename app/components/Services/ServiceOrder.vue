@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center gap-4">
+  <div class="flex flex-col items-center gap-4">
     <section
       class="bg-secondary/70 order-last md:order-first text-white my-5 rounded-2xl p-3"
     >
@@ -9,7 +9,7 @@
           {{ price }}
         </p>
       </div>
-      <div class="text-red-600/60 font-bold text-2xl w-100 py-2 my-3">
+      <div class="text-red-600/60 font-bold text-2xl w-70 py-2 my-3">
         عروض خاصة %
       </div>
       <div
