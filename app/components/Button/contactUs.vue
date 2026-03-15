@@ -14,7 +14,7 @@
     <!-- قائمة الأرقام المنبثقة -->
     <div
       v-if="showNumbers"
-      class="absolute top-full left-0 mt-2 w-64 bg-white text-black rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50"
+      class="absolute top-full left-0 right-5 mt-2 w-64 bg-white text-black rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50"
     >
       <div class="py-2">
         <h3
@@ -40,10 +40,9 @@
 const callUs = "اتصل الآن";
 const showNumbers = ref(false);
 
-// قائمة أرقام الاتصال
 const phoneNumbers = [
-  { label: "📞 966الرقم الأول: 0547202483", value: "9660547202483" },
-  { label: "📞 966الرقم الثاني: 0555555555", value: "9660555555555" }, // غير هذا الرقم
+  { label: " 966الرقم الأول: 0547202483", value: "9660547202483" },
+  { label: " 966554112043 :الرقم الثاني", value: "966554112043" },
 ];
 
 const makeCall = (phone) => {

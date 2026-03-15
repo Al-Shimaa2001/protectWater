@@ -28,13 +28,13 @@ const contactInfo = [
   {
     icon: "lucide:phone",
     title: "اتصل بنا",
-    value: "9660547202483" + " |  " + "",
+    value: "9660547202483" + " |  " + "966554112043",
     description: "متاحون على مدار الساعة",
   },
   {
     icon: "lucide:message-circle",
     title: "واتساب",
-    value: "9660547202483" + " |  " + " ",
+    value: "9660547202483" + " |  " + "966554112043 ",
     description: "رد فوري على استفساراتك",
   },
   {

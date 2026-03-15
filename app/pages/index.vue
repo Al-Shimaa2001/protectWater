@@ -14,7 +14,7 @@ definePageMeta({
   title: "الصفحة الرئيسية  ",
 });
 useHead({
-  title: " شركة العزل الذهبي",
+  title: " شركة إعمار البلاد",
   meta: [
     {
       name: "description",
