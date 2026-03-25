@@ -10,7 +10,7 @@
       v-usal="'fade-u duration-500'"
     >
       <div
-        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 my-5 md:my-0 mx-3 -translate-y-17 md:-translate-y-7"
+        class="bg-gray-300/20 p-2 rounded-xl flex items-center w-70 my-5 md:my-4 mx-3 -translate-y-17 md:-translate-y-13"
       >
         <span class="m-2 p-2 bg-green-500 rounded-full"></span>
         <p class="text-lg" data-usal="fade-u">

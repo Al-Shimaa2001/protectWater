@@ -34,7 +34,9 @@ const service = computed(() => {
 
 useHead({
   title: computed(() =>
-    service.value ? `${service.value.title} - اعمار البلاد` : "الخدمة غير موجودة",
+    service.value
+      ? `${service.value.title} - اعمار البلاد`
+      : "الخدمة غير موجودة",
   ),
   meta: [
     {
