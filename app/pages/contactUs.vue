@@ -40,7 +40,7 @@
 
 <script setup>
 definePageMeta({
-  title: "تواصل معنا ",
+  title: "تواصل معنا - اعمار البلاد",
   meta: [
     {
       name: "description",
