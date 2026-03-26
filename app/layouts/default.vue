@@ -6,5 +6,6 @@ import MobileNav from "~/components/Nav/MobileNav.vue";
   <nav-bar class="hidden lg:flex" />
   <MobileNav class="flex lg:hidden" />
   <slot />
+  <ButtonPageUp />
   <Footer />
 </template>

@@ -14,6 +14,26 @@
 
   <UContainer class="py-10 grid grid-cols-1 md:grid-cols-3 gap-5">
     <main class="col-span-2">
+      <h2 class="p-2 shadow bg-primary/10 rounded-lg text-3xl my-5">
+        {{ intro }} {{ service.title }}
+      </h2>
+      <p
+        class="text-lg text-gray-700 mb-5 leading-7"
+        v-usal="'fade-u duration-500'"
+      >
+        {{ service.introduction }}
+      </p>
+      <h2 class="p-2 shadow bg-primary/10 rounded-lg text-3xl my-5">
+        {{ importanceTitle }} {{ service.title }}
+      </h2>
+      <p
+        class="text-lg text-gray-700 mb-5 leading-7"
+        v-usal="'fade-u duration-500'"
+        v-for="(importance, index) in service.importance"
+        :key="index"
+      >
+        ◀ {{ importance }}
+      </p>
       <ServicesOurServices />
       <ServicesVideo />
       <ServicesMatrials />
@@ -24,6 +44,8 @@
 
 <script setup>
 import { servicesList } from "~/data/services";
+const intro = "نبذه عن  ";
+const importanceTitle = "أهمية  ";
 
 const route = useRoute();
 const serviceId = route.params.id;
