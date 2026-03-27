@@ -7,8 +7,8 @@
       overlayColor="var(--color-blue-800)"
       :overlayOpacity="0.5"
       height="100vh"
-      title="تواصل معنا"
-      description="تواصل معنا للاستفسار والخدمات - نحن هنا لمساعدتك في أي وقت"
+      :title="title"
+      :description="description"
     >
       <div class="flex gap-4 justify-center my-7" data-usal="fade-d">
         <ButtonContactUs />
@@ -59,4 +59,7 @@ useHead({
     },
   ],
 });
+const title = "تواصل معانا";
+const description =
+  "تواصل معنا للاستفسار والخدمات - نحن هنا لمساعدتك في أي وقت";
 </script>
