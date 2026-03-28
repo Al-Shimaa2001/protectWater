@@ -17,6 +17,24 @@
           <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <UBadge size="lg" color="primary" variant="soft" class="mb-4">
+                شركة إعمار البلاد
+              </UBadge>
+              <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                خبراء العزل والترميمات ومكافحة الآفات في السعودية
+              </h2>
+              <p class="text-lg text-muted-foreground mb-8 leading-relaxed">
+                شركة إعمار البلاد هي اسم موثوق في السوق السعودي في مجال العزل
+                والترميمات ومكافحة الآفات. نمتلك فريقًا متخصصًا من المهندسين
+                والفنيين المدربين على أعلى المستويات، ونعتمد في عملنا على أحدث
+                التقنيات والمعدات والمواد المعتمدة دوليًا. نلتزم بتقديم خدمة
+                سريعة واحترافية، مع معاينة مجانية لتقييم الاحتياجات بدقة، وتقديم
+                أسعار تنافسية دون المساس بالجودة. نخدم جميع مناطق المملكة
+                العربية السعودية، ونضمن لعملائنا راحة البال من خلال ضمان ممتد
+                على جميع الخدمات التي نقدمها.
+              </p>
+            </div>
+            <div>
+              <UBadge size="lg" color="primary" variant="soft" class="mb-4">
                 {{ bage }}
               </UBadge>
               <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -29,6 +47,7 @@
                 {{ success }}
               </p>
             </div>
+           
           </div>
 
           <!-- Stats -->
