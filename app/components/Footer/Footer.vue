@@ -51,6 +51,7 @@
             <li v-for="(link, index) in quickLinks" :key="index">
               <NuxtLink
                 :to="link.href"
+                external
                 class="text-gray-400 hover:text-amber-400 text-sm"
               >
                 {{ link.label }}
