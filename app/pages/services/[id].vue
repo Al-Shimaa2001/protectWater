@@ -35,8 +35,11 @@
         ◀ {{ importance }}
       </p>
       <ServicesOurServices />
+      <ServicesNeedSigns />
+      <ServicesWhyChooseUs />
       <ServicesVideo />
       <ServicesMatrials />
+      <ServicesExecutionSteps />
     </main>
     <ServicesServiceOrder />
   </UContainer>
